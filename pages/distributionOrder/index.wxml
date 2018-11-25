@@ -1,0 +1,15 @@
+<view class="header">
+    <view class="header-l">
+        <navigator url="" class="return">
+            <image src="/images/shareimg/return.png" />
+        </navigator>
+        <text class="header-num">分销订单({{orderNum}})</text>
+    </view>
+    <view class="header-r">
+        <text>预计：+{{money}}元</text>
+    </view>
+</view>
+<view class="null">
+    <image src="/images/distributionOrder/dingdan2.png" />
+    <text>您还没有分销订单！</text>
+</view>

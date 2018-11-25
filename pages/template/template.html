@@ -1,0 +1,13 @@
+<template name="shopList">
+	<view class="modBox">
+		<block wx:for="{{item.list}}" wx:key="id">
+			<view class="pro-list">
+				<navigator url="/pages/detail/index?id={{item.id}}">
+					<image src="{{item.original_img}}" mode="widthFix"></image>
+					<text class="pro-name">{{item.good_name}}</text>
+					<view class="price">¥{{item.current_price}}</view>
+				</navigator>
+			</view>
+		</block>
+	</view>
+</template>

@@ -1,0 +1,25 @@
+
+<import src="goodTemp/goodTemp.wxml" />
+<view>
+    <view class="swiper-tab">
+        <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">综合</view>
+        <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">销量</view>
+        <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">价格</view>
+        <view class="swiper-tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">新品</view>
+    </view>
+
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" 
+	style="height:{{winHeight-44}}px">
+        <swiper-item>
+            <scroll-view scroll-y="true" style="height:{{winHeight-44}}px">
+                <view class="auto">
+                    <block wx:for="{{totalList}}" wx:key="id">
+                        <template is="goodsItem" data="{{item}}"></template>
+                    </block>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+        </swiper-item>
+    </swiper>
+</view>

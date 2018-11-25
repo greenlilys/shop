@@ -1,0 +1,115 @@
+<view class="my_top" style="background-image: url(/images/my/my_top_bg.jpg);">
+    <view class="my_top_left"><image src="{{userInfo.userBaseInfo.avatar}}" /></view>
+    <view class="my_top_center">
+        <text class="my_top_title">{{userInfo.userBaseInfo.nickname}}</text>
+        <text class="my_top_dengji">[普通等级]</text>
+    </view>
+    <navigator url="/pages/infor/index" class="my_top_right"><image src="/images/my/step.png" /></navigator>
+</view>
+ <view style="clear:both;"></view> 
+<view class="yue">
+    <text class="yue_left">余额：<text class="yue_color">{{userInfo.userBaseInfo.residue_money}}</text></text>
+    <navigator url="/pages/recharge/index" class="yue_right">充值</navigator>
+</view>
+<view class="jifen">
+    <text class="jifen_left">积分：<text class="jifen_num">{{userInfo.userBaseInfo.integral}}</text></text>
+</view>
+
+<view class="my_user">
+<navigator url="/pages/myOrder/index">
+    <view class="u-list-main">
+        <image src="/images/my/order-pic.png"></image>        
+        <text>我的订单</text>
+    </view>
+    <view class="my_user_allorder">
+        <text>查看我的全部订单</text>
+        <image src="/images/my/right.png" />
+    </view>
+    </navigator>
+</view>
+<view class="user-nav">
+    <navigator url="/pages/myOrder/index?currentTab=1">
+        <image src="/images/my/1-icon.png"></image>
+        <text>待付款</text>
+    </navigator>
+    <navigator url="/pages/myOrder/index?currentTab=3">
+        <image src="/images/my/1-icon1.png"></image>
+        <text>待收货</text>
+    </navigator>
+    <navigator url="/pages/myOrder/index?currentTab=4">
+        <image src="/images/my/1-icon2.png"></image>
+        <text>待发货</text>
+    </navigator>
+    <navigator url="/pages/myOrder/index?currentTab=2">
+        <image src="/images/my/1-icon3.png"></image>
+        <text>待评论</text>
+    </navigator>
+</view>
+
+<view class="td-bt" wx:if="{{userInfo.is_fenxiao}}">
+    <navigator url="/pages/distribution/index">
+        <image src="/images/my/fenxiaozhongxin.png" class="td-icon"></image>
+        <text>分销中心</text>
+        <image src="/images/next.png" class="next"></image>
+    </navigator>
+</view>
+<view class="td-bt" wx:if="{{userInfo.is_fenxiao}}">
+    <navigator url="/pages/infor/index">
+        <image src="/images/my/gerenziliao.png" class="td-icon"></image>
+        <text>我的资料</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+
+<view class="td-bt">
+    <navigator url="/pages/coupons/index">
+        <image src="/images/my/lingquan.png" class="td-icon"></image>
+        <text>领取优惠券</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+<view class="td-bt">
+    <navigator url="/pages/myCoupon/index">
+        <image src="/images/my/wodequan.png" class="td-icon"></image>
+        <text>我的优惠券</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+
+<view class="td-bt">
+    <navigator url="/pages/collect/index">
+        <image src="/images/my/shoucang.png" class="td-icon"></image>
+        <text>我的收藏</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+<view class="td-bt">
+    <navigator url="/pages/footprint/index">
+        <image src="/images/my/zuji.png" class="td-icon"></image>
+        <text>我的足迹</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+<view class="td-bt">
+    <navigator url="/pages/message_reminder/index">
+        <image src="/images/my/tixing.png" class="td-icon"></image>
+        <text>消息提醒设置</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+
+<view class="td-bt">
+    <navigator url="/pages/recharge_record/index">
+        <image src="/images/my/czjl.png" class="td-icon"></image>
+        <text>充值记录</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>
+
+<view class="td-bt">
+    <navigator url="/pages/myAddress/index">
+        <image src="/images/my/shdzgl.png" class="td-icon"></image>
+        <text>收货地址管理</text>
+        <image src="/images/my/next.png" class="next"></image>
+    </navigator>
+</view>

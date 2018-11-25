@@ -1,0 +1,187 @@
+<!-- 需要购物满100才能成为分销商-->
+
+<view class="content" wx:if="{{userInfo.isagent}}">
+
+    <!--<view class="content" wx:if="{{contralPage == 'fullCut'? true : false}}">
+    <image src="/images/distributor/bg.png" class="fenxiao-img"></image>
+    <text class="tiaojian">
+    本店累计消费满<text class="tiaojian-color">100.00元</text>，才可成为(云微商)购物中心云微商创客，您已消费
+    <text class="tiaojian-color">0.00</text>元，望继续努力！ </text>
+    <navigator url="/pages/good/index">
+        <view class="btn">
+            <image src="/images/distributor/cart2.png" class="cart-img"></image>
+            <text class="shop">继续购物</text>
+        </view>
+    </navigator>
+</view>
+&lt;!&ndash;需要购买指定商品才能成为分销商 &ndash;&gt;
+<view class="content" wx:elif="{{contralPage == 'designGoods'? true : false}}">
+    <image src="/images/distributor/bg.png" class="fenxiao-img"></image>
+    <text class="tiaojian">
+   本店需购买商品【BetterLife智能家居 智慧中心 语音智能家居】才可成为分销商，请先在去购买吧。
+	</text>
+    <navigator url="/pages/good/index">
+        <view class="btn">
+            <image src="/images/distributor/cart2.png" class="cart-img"></image>
+            <text class="shop">现在去购买</text>
+        </view>
+    </navigator>
+</view>
+&lt;!&ndash; 需要完善资料&ndash;&gt;
+<block wx:elif="{{contralPage == 'fillInfomation'? true : false}}">
+    <view class="infoBox">
+        <image src="/images/distributor/tishi.png" class="tishi" />
+        <text>您需要完善您的资料才能继续！</text>
+        <text>如果您的浏览器没有自动跳转请点击此处</text>
+        <view class="true">
+            <navigator url="/pages/infor/index">
+                <button type="default">确认</button>
+            </navigator>
+        </view>
+    </view>
+</block>
+
+&lt;!&ndash; 等待审核&ndash;&gt;
+<view wx:elif="{{contralPage == 'waitAudit'? true : false}}">
+    <view class="tops">
+        <image src="/images/distributor/bg.png" />
+    </view>
+    <view class="centers">
+        <image src="/images/distributor/queren.png" />
+        <text>您的分销申请已经提交，请等待审核！</text>
+    </view>
+	<navigator url="/pages/good/index">
+    <button class="shop">去商城逛逛</button>
+	</navigator>
+</view>
+&lt;!&ndash; 已经成为分销商&ndash;&gt;
+
+<view wx:elif="{{contralPage == 'distributor'? true : false}}">-->
+    <view class="top">
+        <view class="top-l">
+            <image src="{{userInfo.avatar}}" />
+        </view>
+        <view class="top-r">
+            <text class="top-title">{{userInfo.nickName}}</text>
+            <text>[{{memberGrade}}]</text>
+            <text class="top-peo">推荐人：{{Referee}}</text>
+        </view>
+    </view>
+    <view class="center">
+        <view class="center-t">
+            <text>累计佣金：{{userInfo.commission}}元</text>
+            <navigator url="/pages/commision/index">
+                <image src="/images/shareimg/fenxiaozx.png" />
+            </navigator>
+        </view>
+        <view class="center-c">
+            <text>可提现佣金（元）</text>
+        </view>
+        <view class="center-f">
+            <text>{{userInfo.commission}}</text>
+            <navigator url="">提现</navigator>
+        </view>
+    </view>
+    <view class="fot">
+        <navigator url="/pages/commision/index">
+            <view class="fot-list">
+                <image src="/images/distributor/yongjin.png" />
+                <text class="fot-bt">分销佣金</text>
+                <text class="price"><text class="price-color">{{disData.distributionCommission}}</text>元</text>
+            </view>
+        </navigator>
+        <navigator url="/pages/distributionOrder/index">
+            <view class="fot-list">
+                <image src="/images/distributor/dingdan.png" />
+                <text class="fot-bt">分销订单</text>
+                <text class="price"><text class="price-color">{{disData.distributionOrder}}</text>个</text>
+            </view>
+        </navigator>
+        <navigator url="/pages/commision/index">
+            <view class="fot-list fot-listf">
+                <image src="/images/distributor/mingxi.png" />
+                <text class="fot-bt">佣金明细</text>
+                <text class="price">佣金明细</text>
+            </view>
+        </navigator>
+        <navigator url="/pages/distributorMyTeam/index">
+            <view class="fot-list">
+                <image src="/images/distributor/tuandui.png" />
+                <text class="fot-bt">我的团队</text>
+                <text class="price"><text class="price-color">{{disData.myTeam}}</text>人</text>
+            </view>
+        </navigator>
+        <navigator url="/pages/myConsumer/index">
+            <view class="fot-list">
+                <image src="/images/distributor/kehu.png" />
+                <text class="fot-bt">我的客户</text>
+                <text class="price"><text class="price-color">{{disData.meconsumer}}</text>人</text>
+            </view>
+        </navigator>
+        <navigator url="/pages/share/index">
+            <view class="fot-list fot-listf">
+                <image src="/images/distributor/erweima.png" />
+                <text class="fot-bt">二维码</text>
+                <text class="price">推广二维码</text>
+            </view>
+        </navigator>
+        <!-- <navigator url="">
+            <view class="fot-list">
+                <image src="/images/distributor/shezhi.png" />
+                <text class="fot-bt">小店设置</text>
+                <text class="price">设置我的小店</text>
+            </view>
+        </navigator> -->
+    </view>
+
+</view>
+<!--需要购买指定商品才能成为分销商 -->
+<view class="content" wx:elif="{{}}">
+    <image src="/images/distributor/bg.png" class="fenxiao-img"></image>
+    <text class="tiaojian">
+   本店需购买商品【BetterLife智能家居 智慧中心 语音智能家居】才可成为分销商，请先在去购买吧。
+	</text>
+    <navigator url="../good/index">
+        <view class="btn">
+            <image src="/images/distributor/cart2.png" class="cart-img"></image>
+            <text class="shop">现在去购买</text>
+        </view>
+    </navigator>
+</view>
+<!-- 需要完善资料-->
+<view wx:elif="{{}}">
+    <image src="/images/distributor/tishi.png" class="tishi" />
+    <text>您需要完善您的资料才能继续！</text>
+    <text>如果您的浏览器没有自动跳转请点击此处</text>
+    <view class="true">
+        <navigator url="/pages/infor/index">
+            <button type="default">确认</button>
+        </navigator>
+    </view>
+</view>
+
+<!-- 等待审核-->
+<view wx:elif="{{}}">
+    <view class="tops">
+        <image src="/images/distributor/bg.png" />
+    </view>
+    <view class="centers">
+        <image src="/images/distributor/queren.png" />
+        <text>您的分销申请已经提交，请等待审核！</text>
+    </view>
+    <button class="shop">去商城逛逛</button>
+</view>
+<!-- 已经成为分销商-->
+
+<view wx:else>
+    <image src="/images/distributor/bg.png" class="fenxiao-img"></image>
+    <text class="tiaojian">
+    本店累计消费满<text class="tiaojian-color">100.00元</text>，才可成为(云微商)购物中心云微商创客，您已消费
+    <text class="tiaojian-color">0.00</text>元，望继续努力！ </text>
+    <navigator url="/pages/lists/index">
+        <view class="btn">
+            <image src="/images/distributor/cart2.png" class="cart-img"></image>
+            <text class="shop">继续购物</text>
+        </view>
+    </navigator>
+</view>

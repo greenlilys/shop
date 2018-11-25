@@ -1,0 +1,443 @@
+page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 直接设置swiper属性 */
+
+.banner {
+    height: 500rpx;
+}
+
+.banner swiper-item image {
+    width: 100%;
+    height: 100%;
+}
+
+.detail {
+    width: 90%;
+    height: 100rpx;
+    margin: 0 auto;
+    padding: 30rpx 0 20rpx 0;
+    border-bottom: 1rpx solid #d1d1d1;
+}
+
+.title {
+    font-size: 11pt;
+    width: 72%;
+    float: left;
+    color: #666;
+}
+
+.fenxiao {
+    width: 25%;
+    height: 70rpx;
+    line-height: 70rpx;
+    float: right;
+    font-size: 13pt;
+    text-align: center;
+    background: #cb2527;
+    color: #fff;
+    border-radius: 10rpx 10rpx;
+}
+
+.price {
+    width: 90%;
+    height: 150rpx;
+    margin: 0 auto;
+}
+
+.price-l {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: left;
+    color: #cb2527;
+    font-size: 16pt;
+    display: block;
+}
+
+.price-r {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: right;
+    font-size: 11pt;
+    color: #999;
+}
+
+.line {
+    width: 100%;
+    background: #efefef;
+    height: 20rpx;
+    display: inline-block;
+    margin: 20rpx 0rpx;
+    text-align: center;
+    clear: both;
+}
+
+.detail-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: left;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100rpx;
+}
+
+.button-green {
+    background-color: #4caf50;
+}
+
+.button-red {
+    background-color: #cb2527;
+}
+
+button {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;
+    border-radius: 0rpx;
+    width: 50%;
+    height: 100%;
+    line-height: 100rpx;
+}
+
+.detail-nav image {
+    width: 70rpx;
+    height: 50rpx;
+    margin: 20rpx 40rpx;
+}
+
+.line_nav {
+    width: 5rpx;
+    height: 100%;
+    background-color: gainsboro;
+}
+
+/* 占位 */
+
+.temp {
+    height: 100rpx;
+}
+
+.swiper-tab {
+    width: 100%;
+    border-bottom: 2rpx solid #d1d1d1;
+    text-align: center;
+    line-height: 80rpx;
+}
+
+.swiper-tab-item {
+    font-size: 12pt;
+    display: inline-block;
+    width: 25%;
+    color: #666;
+}
+
+.on {
+    color: #f10b2e;
+    border-bottom: 5rpx solid #f10b2e;
+}
+
+.swiper-box {
+    display: block;
+    width: 92%;
+    height: 3000rpx;
+    margin-top: 30rpx;
+}
+
+.swiper-box swiper-item {
+    display: block;
+    width: 100%;
+    font-size: 11pt;
+}
+
+.image_detail {
+    width: 100%;
+}
+
+.canshu {
+    height: 80rpx;
+}
+
+.canshu text {
+    border: 2rpx solid #d1d1d1;
+    border-radius: 10rpx 10rpx;
+    font-size: 10pt;
+    color: #999;
+    padding: 5rpx 0 5rpx 10rpx;
+    margin: 10rpx 0;
+}
+
+.canshu-l {
+    width: 46%;
+    float: left;
+}
+
+.canshu-r {
+    width: 46%;
+    float: right;
+}
+
+.comment-list {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.comment-list navigator {
+    width: 22%;
+    display: block;
+    background: none;
+    text-align: center;
+    float: left;
+    margin-left: 10rpx;
+    border-right: 2rpx solid #ddd;
+}
+
+.navigator-hover {
+    color: #cb2527;
+}
+
+.comment-pic {
+    height: 200rpx;
+    overflow: hidden;
+    margin-top: 30rpx;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+}
+
+.comment-pic .tit {
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #f0f0f0;
+    text-align: center;
+}
+
+.tx {
+    float: left;
+    width: 60rpx;
+    height: 60rpx;
+    margin: 10rpx 10rpx;
+}
+
+.pic-name {
+    width: 20%;
+    float: left;
+    color: #cb2527;
+    font-size: 12pt;
+}
+
+.pic-time {
+    width: 35%;
+    float: right;
+    color: #9b9b9b;
+    font-size: 10pt;
+}
+
+.comment-con {
+    margin: 30rpx 0 0 20rpx;
+}
+
+/*弹窗*/
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.2;
+    overflow: hidden;
+    z-index: 1000;
+    color: #fff;
+}
+
+.drawer_attr_box {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+    background: #fff;
+}
+
+.close_icon {
+    width: 25rpx;
+    height: 25rpx;
+    line-height: 20rpx;
+    font-size: 30rpx;
+    position: absolute;
+    right: 5rpx;
+    top: 5rpx;
+    padding: 10rpx;
+    color: #ccc;
+    /*border: 1rpx solid #ccc;*/
+    border-radius: 50%;
+    text-align: center;
+    background: #fff;
+}
+
+.drawer_attr_content {
+    padding: 20rpx;
+    /*height: 600rpx;*/
+    overflow-y: scroll;
+}
+
+.text_center {
+    width: 100%;
+}
+
+.mingcheng {
+    width: 60%;
+    display: inline-block;
+    font-size: 35rpx;
+    line-height: 50rpx;
+    margin-left: 40rpx;
+}
+
+.drawer_image {
+    width: 28%;
+    height: 200rpx;
+}
+
+.drawer_desc {
+    font-size: 28rpx;
+    margin: 20rpx;
+    height: 150rpx;
+    width: 100%;
+}
+
+.cun {
+    margin: 5px;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+    width: 20%;
+}
+
+.chi {
+    width: 40%;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border: 1px solid #999;
+    display: inline-block;
+    margin: 5px;
+}
+
+.btn {
+    width: 80%;
+    padding: 15rpx 0;
+    border-radius: 10rpx;
+    text-align: center;
+}
+.dialog-block-item{
+	margin-top:20rpx;
+}
+.open_btn {
+    margin: 40rpx 10%;
+    border-radius: 10rpx;
+    background: #20bb21;
+    color: #fff;
+}
+
+.styleTitle {
+    margin: 5px;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+    width: 20%;
+}
+
+.typeStyle {
+    font-size: 30rpx;
+    padding: 0rpx 20rpx;
+}
+.selected{
+	font-size: 30rpx;
+}
+.active {
+    background: #cb2527;
+    color: #fff;
+}
+
+.noUse {
+    background: #fff;
+    color: #ccc;
+}
+
+.typeBox {
+    padding-bottom: 20rpx;
+}
+
+/*数量*/
+
+.dian {
+    width: 70%;
+    display: inline-block;
+}
+
+.shu {
+    width: 100%;
+    margin-top: 35rpx;
+    margin-bottom: 160rpx;
+}
+
+.stepper {
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200rpx;
+    overflow: hidden;
+    margin-left: 250rpx;
+    border-radius: 29rpx;
+    background: #fcfcfc;
+}
+
+.stepper text {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 900;
+    color: #939393;
+}
+
+.stepper input {
+    width: 30px;
+    height: 25px;
+    text-align: center;
+}
+
+.footc {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #cb2527;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    font-size: 14pt;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+}

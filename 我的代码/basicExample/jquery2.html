@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+<script src="../src/jquery-3.2.1.min.js"></script>
+<style>
+body{
+	padding:0;
+	margin:0;
+}
+.div1{
+	width:100px;
+	height:50px;
+	background:#FF9213;
+}
+.div2{
+	width:100px;
+	height:50px;
+	background:#19B119;
+}
+#box1{
+	width:200px;
+	height:60px;
+	border:5px solid red;
+	background:#19B119;
+	
+}
+.fontColor{
+	color:#D54B28;
+}
+.div4{
+	position:relative;
+	width:100px;
+	height:100px;
+	background:#D54B28;
+	cursor:pointer;
+}
+input:focus{
+	background:#ccc;
+	outline-style: none;
+}
+</style>
+</head>
+<body>
+<div class="div1">我是div1</div>
+<div class="div2">我是div2</div>
+<div class="div3">
+	<a class="box" href="" id="nav">百度</a>
+	<a href="">百度</a>
+	<a href="">把我移出</a>
+</div>
+<div class="div4">动画</div>
+<form action="" id="forms">
+	<input type="button" value="提交">
+	<input type="checkbox">1
+	<input type="checkbox">2
+	<input type="checkbox">3
+	<br>
+	用户名:<input type="text" id="username">
+</form>
+<div class="div5"></div>
+<ul> 
+	<li id="foo">foo</li> 
+	<li id="bar">bar</li> 
+	<li id="baz">baz</li> 
+</ul> 
+
+<script>
+	$(function(){		
+		// $(".div1").bind("click",function(){
+		// 	if($(this).next().is(":visible")){
+		// 		$(this).next().hide();
+		// 	}else{
+		// 		$(this).next().show();
+		// 	}
+		// })
+
+		//toggle方法用来切换元素的显示状态
+		// $(".div1").mouseover(function(){			
+		// 	$(this).next().toggle()
+		// }).mouseout(function(){			
+		// 	$(this).next().toggle()
+		// })
+
+		$(".div1").click(function(){			
+			$(this).next().toggle()
+		})
+
+		// $(".div1").mouseover(function(){			
+		// 	$(this).next().fadeOut()
+		// }).mouseout(function(){			
+		// 	$(this).next().fadeIn()
+		// })
+
+		// $(".div1").hover(function(){			
+		// 	$(this).stop(true).next().fadeOut()
+		// }).mouseout(function(){			
+		// 	$(this).stop(true).next().fadeIn()
+		// })
+
+		$(".div2").mouseover(function(){			
+			$(this).next().slideUp()
+		}).mouseout(function(){			
+			$(this).next().slideDown()
+		})
+	
+		// var odiv3 = document.getElementsByClassName("div3")[0];			
+		// var oa = odiv3.getElementsByTagName("a")[0];
+		// oa.setAttribute("href","https://www.baidu.com/");
+
+		console.log($(".div3").children().length);
+		var ochild = $(".div3").children();
+
+		// $(".div3>a:eq(0)").attr("href","https://www.baidu.com/");
+		// $(".div3 :first-child").attr("href","https://www.baidu.com/");
+		// $(".div3>a:first").attr("href","https://www.baidu.com/");
+		$(".div3 a:nth-of-type(1)").attr("href","https://www.baidu.com/");
+
+		$(".div1").addClass("fontColor");
+		$(".div3 a:nth-of-type(3)").replaceWith("<span>我是替换的内容</span>");
+		var news = $("<a href='https://www.baidu.com/'>新闻</a>");
+		$(".div3").append(news);
+
+		// $(".div4").click(function(){
+		// 	$(this).animate({left:"200px",height:"200px"},3000,function(){
+		// 		$(this).css("border","5px solid black");
+		// 	});
+		// })
+
+		$(".div4").click(function(){
+			if(!$(".div4").is(":animated")){
+				$(this).animate({width:"+=50"},300)
+			}
+		})
+		
+		// $("#username").blur(function(){
+		// 		if(this.value){
+		// 			console.log(222)
+		// 		}
+			
+		// })
+
+		$("#username").keydown(function(e){
+			console.log(e.keyCode);
+			console.log(String.fromCharCode(e.keyCode))						
+			
+		})
+
+		$(".div5").css({"width":"300px","height":"100px","background":"#ccc"});
+
+		$.each( [0,1,2], function(i, n){
+		  console.log( "Item #" + i + ": " + n );
+		});
+
+		$('li').index(document.getElementById('bar')); //1，传递一个DOM对象，返回这个对象在原先集合中的索引位置 
+		$('li').index($('#bar')); //1，传递一个jQuery对象 
+		$('li').index($('li:gt(0)')); //1，传递一组jQuery对象，返回这个对象中第一个元素在原先集合中的索引位置 
+		$('#bar').index('li'); //1，传递一个选择器，返回#bar在所有li中的做引位置 
+		$('#bar').index(); //1，不传递参数，返回这个元素在同辈中的索引位置。
+	
+
+	})
+</script>
+
+</body>
+</html>

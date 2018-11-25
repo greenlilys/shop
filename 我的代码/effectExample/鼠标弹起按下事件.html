@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+#scro{
+	width:500px;
+	height:8px;
+	background-color:#ccc;
+	position:relative;
+	margin:200px auto;
+}
+#bar{
+	height:20px;
+	width:8px;
+	background-color:red;
+	position:absolute;
+	top:-6px
+}
+</style>
+	
+</head>
+<body>
+	<!-- onmousedown鼠标按下事件
+	onmouseup鼠标弹起事件
+	onmousemove鼠标按下之后拖动事件
+	obj.onmousedown = function(){
+	  obj.onmousemove(){
+
+	  }
+	} -->
+	<div id="scro">
+		<div id="bar"></div>
+	</div>
+<script>
+	var scro = document.getElementById("scro");
+	var bar = document.getElementById("bar");
+	bar.onmousedown = function(e){
+		var e = event || window.event;
+				
+		document.onmousemove = function(e){
+			var e = event || window.event;
+			bar.style.left = e.clientX - scro.offsetLeft + "px";
+		}
+		document.onmouseup = function(){
+			
+			document.onmousemove = null; 
+		}
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+
+body{
+	margin:0;
+	padding:0;
+	
+}
+
+#box {
+float:left;
+width:300px;
+margin:0 0 0 100px; 
+
+}
+img{
+	width:78px;
+	height:78px;
+}
+#fu_dong:after{
+	content:'.';
+	display:block;
+	height:0;
+	line-height: 0
+	visibility:hidden;
+	clear:both;
+}/*清除浮动*/
+#box .tou_ying { 
+	font-weight:700;
+	font-size:30px;
+	line-height: 60px;
+	text-shadow:2px 2px 3px red; 
+	-moz-text-shadow:2px 2px 3px red; 
+	-webkit-text-shadow:2px 2px 3px red; 
+	behavior: url(pie.htc);
+	filter:progid:DXImageTransform.Microsoft.Shadow(color='red', Direction='135', Strength='5');
+
+} 
+ /*IE9下不兼容 text-shadow*/
+#tou_ming{
+	width:100px;
+	height:100px;
+	background:red;
+	opacity:0.6;
+	filter: alpha(opacity=60);
+	 box-shadow: 5px 5px 5px #666; 
+	 behavior: url(pie.htc);
+
+}
+/*filter: alpha(opacity=60);IE8下透明度实现代码
+box-shadow IE8下不兼容	
+*/
+
+
+
+#min_height {
+	margin-top:10px;
+	background:#ccc;
+	min-height:100px;
+	height:auto !important;
+	height:100px;
+	overflow:visible;
+}  /*最小高度*/
+.yuan_jiao{
+	
+	border:1px solid #ddd;
+/*	border-radius:50%;*/
+}
+.yuan_jiao img{
+	border-radius:50%;
+	behavior: url(pie.htc);
+}
+
+/*border-radius IE8下不兼容*/
+.centers{
+	height:100px;
+	line-height: 100px;
+}
+.centers img{
+	vertical-align:middle;
+}
+</style>
+
+
+</head>
+<body>
+<div id="fu_dong">
+	<div id="box">
+		<span class="tou_ying">PHOTOSHOPPHOT</span>
+	</div>
+</div>
+	
+	<div id="tou_ming"></div>
+	<div id="min_height">
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+		div里的内容，IE默认为居中，而FF默认为左对齐<br>
+	</div>
+	<div class="yuan_jiao">
+		<img src="hot5.gif" alt="">
+	</div>
+	<div class="centers">
+		姓名是什么<img src="hot5.gif" alt="">
+	</div>
+	<input type="text" id="btn">
+	<!-- IE8 下的input.type属性为只读 -->
+
+	<script>
+		var btn = document.getElementById("btn");		
+		btn.type = "button"
+	</script>
+</body>
+</html>

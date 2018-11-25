@@ -1,0 +1,258 @@
+.content {
+    width: 100%;
+    height: 100%;
+}
+page{
+	height:100%;
+}
+.fenxiao-img {
+    width: 100%;
+    height: 240rpx;
+}
+
+.tiaojian {
+    width: 90%;
+    height: 200rpx;
+    margin: 0;
+    line-height: 45rpx;
+    display: block;
+    font-size: 12pt;
+    color: #666;
+    padding: 0 5%;
+   text-align:justify;
+}
+
+.tiaojian-color {
+    color: #eaaa3c;
+}
+
+.btn {
+    width: 90%;
+    height: 80rpx;
+    border-radius: 10rpx 10rpx;
+    background: #cb2527;
+    margin: 0 auto;
+}
+
+.cart-img {
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+    margin: 15rpx 20rpx 0 35%;
+}
+
+.shop {
+    float: left;
+    color: #fff;
+    font-size: 13pt;
+    text-align: center;
+    line-height: 80rpx;
+}
+/*
+成为分销商
+*/
+
+.top {
+    width: 90%;
+    padding: 0 5%;
+    height: 200rpx;
+}
+
+.top-l {
+    width: 20%;
+    float: left;
+}
+
+.top-l image {
+    width: 120rpx;
+    height: 120rpx;
+    margin-top: 30rpx;
+	border-radius:50%;
+}
+
+.top-r {
+    width: 77%;
+    float: left;
+    margin: 3% 0 0 3%;
+}
+
+.top-r text {
+    display: block;
+    font-size: 11pt;
+    color: #cc3431;
+    margin-top: 10rpx;
+}
+
+.top-r .top-title {
+    font-size: 14pt;
+    color: #333;
+}
+
+.top-r .top-peo {
+    font-size: 10pt;
+    color: #999;
+}
+
+.center {
+    width: 90%;
+    height: 300rpx;
+    padding: 0 5%;
+    color: #fff;
+    text-align: left;
+    background: #cc3431;
+}
+
+.center-t {
+    display: block;
+    width: 100%;
+    height:100rpx;
+    line-height:100rpx;
+    margin-top: 15rpx;
+}
+
+.center-t text {
+    font-size: 11pt;
+    float: left;
+}
+
+.center-t image {
+    float: right;
+    width: 60rpx;
+    height: 60rpx;
+    margin-top: 20rpx;
+}
+
+.center-c {
+    width: 100%;
+    height: 100rpx;
+    display: block;
+    font-size: 12pt;
+}
+
+.center-f {
+    display: block;
+    width: 100%;
+}
+
+.center-f text {
+    font-size: 30pt;
+    float: left;
+}
+
+.center-f navigator {
+    float: right;
+    font-size: 14pt;
+    margin-top: 10rpx;
+    padding: 10rpx 20rpx;
+    border: 1rpx solid #fff;
+    border-radius: 10% 10%;
+}
+.fot .fot-list {
+    width: 33.3%;
+    float: left; 
+    text-align: center;
+    border-bottom: 1rpx solid #ddd;
+    border-right: 1rpx solid #ddd;
+    padding: 30rpx 0;
+	box-sizing: border-box;
+}
+
+.fot{
+	width: 100%;
+	overflow: hidden;	
+} 
+
+.fot navigator{
+	width: 100%;	
+}  
+.fot-list image {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 10rpx 0 10rpx 30%;
+    display: block;
+}
+
+.fot-bt {
+    display: block;
+    font-size: 12pt;
+    margin: 20rpx 0 10rpx 0;
+}
+
+.price {
+    font-size: 11pt;
+    color: #666;
+}
+
+.price-color {
+    color: #fdcc03;
+}
+
+.fot view.fot-listf {
+    border-right: 0;
+    float: left;
+}
+
+.tishi {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 50rpx auto 20rpx auto;
+}
+
+/*
+等待审核
+*/
+
+
+.tops{
+    width:100%;
+    height: 240rpx;
+}
+.tops image{
+    width:740rpx;
+    height:240rpx;
+
+}
+.centers{
+    width: 100%;
+    text-align: center;
+    /* height: 200rpx; */
+    margin-top: 100rpx;
+}
+.centers image{
+    width: 200rpx;
+    height:200rpx;
+}
+.centers text{
+    text-align: center;
+    font-size: 12pt;
+    display: block;
+    color: #666;
+    margin-top: 50rpx;
+}
+button{
+    width:40%;
+    font-size: 14pt;
+    height:70rpx;
+    line-height:70rpx;
+    text-align: center;
+    background:#f10b2e;
+    border-radius:50rpx 50rpx;
+    color: #FFF;
+    margin: 50rpx 0 0 30%;
+}
+
+.infoBox{
+	width:100%;
+	height:100%;
+
+}
+.infoBox image{
+	margin:30rpx auto;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+ .infoBox text{
+	display:block;
+	text-align:center;	
+} 

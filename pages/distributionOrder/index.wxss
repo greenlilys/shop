@@ -1,0 +1,60 @@
+page {
+    background: #eee;
+}
+
+.header {
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #f8f8f8;
+    border-bottom: 2rpx solid #ddd;
+}
+
+.header-l {
+    float: left;
+    margin-left: 3%;
+}
+
+.header-l .return {
+    width: 50rpx;
+    height: 50rpx;
+    float: left;
+}
+
+.header-l image {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 20rpx 10rpx 0 10rpx;
+}
+
+.header-l .header-num {
+    float: left;
+    font-size: 12pt;
+    color: #666;
+}
+
+.header-r {
+    float: right;
+    font-size: 12pt;
+    margin-right: 3%;
+    color: #666;
+}
+
+.null {
+    width: 100%;
+    margin-top: 200rpx;
+}
+
+.null image {
+    width: 200rpx;
+    height: 200rpx;
+    display: block;
+    margin: 30rpx auto;
+}
+
+.null text {
+    font-size: 12pt;
+    color: #999;
+    display: block;
+    text-align: center;
+}

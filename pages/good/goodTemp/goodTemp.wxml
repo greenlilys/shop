@@ -1,0 +1,14 @@
+<template name="goodsItem">
+    <view class="pro-list">
+        <navigator url="../detail/index?id={{item.id}}">
+            <image src="{{item.img}}" mode="widthFix" class="pro-list-img" />
+            <text class="pro-name">{{item.name}}</text>
+        </navigator>
+        <view class="pro-b">
+            <text class="price">¥{{item.price}}</text>
+			<!-- <navigator>
+				<image src="/images/tarbar_cart.png" class="pro-img" mode="widthFix" data-id="{{item.id}}" bindtap="addCart" />
+			</navigator>             -->
+        </view>
+    </view>
+</template>

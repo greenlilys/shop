@@ -1,0 +1,50 @@
+<!-- 信息部分开始 -->
+<form bindsubmit="formSubmit" report-submit="true">
+    <view class="info">
+        <!-- 姓名部分 -->
+        <view class="item">
+            <text>联系人</text>
+            <view class="right">
+                <input type="text" name="name" placeholder="请输入联系人" value="{{name}}" focus="{{focus}}" />
+            </view>
+        </view>
+
+        <input type="text" hidden="1" name="addressId" value="{{addressId}}" />
+        <!-- 电话部分 -->
+        <view class="item">
+            <text>联系电话</text>
+            <view class="right">
+                <input name="tel" type="number" value="{{tel}}" placeholder="请输入联系电话" focus="{{focus}}" />
+            </view>
+        </view>
+
+        <!-- 收货地址部分 -->
+        <view class="item">
+            <text>所在区域</text>
+            <view class="right">
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" name="addre" class="addre">
+                    <view class="picker">当前选择 {{region[0]}} {{region[1]}} {{region[2]}}</view>
+                </picker>
+            </view>
+        </view>
+
+        <!-- 详细地址部分 -->
+        <view class="item">
+            <text>详细地址</text>
+            <view class="right">
+                <input name="door" type="text" placeholder="详细地址"  value="{{door}}" focus="{{focus}}" />
+            </view>
+        </view>
+
+        <view class="message_list">
+            <text>把当前地址设为默认地址</text>
+            <view class="body-view">
+                <switch  name="isDefault" checked="{{isDefault}}"/>
+            </view>
+        </view>
+
+
+    </view>
+    <!-- 信息部分结束 -->
+    <button class="save" formType="submit">保存</button>
+</form>

@@ -1,0 +1,45 @@
+<view class="coupon_tops">
+    <text>全部优惠券</text>
+    <image src="/images/coupons/infortx.png" class="coupon_topr" />
+</view>
+<template name="zhekou">
+    <view class="coupon_list">
+        <image src="/images/shareimg/test.png" class="coupon_img" />
+        <view class="coupon_list_center">
+            <text class="coupon_list_title">折扣券</text>
+            <text class="coupon_list_time">有效期{{data}}</text>
+            <text class="coupon_list_tj"><text class="list_color">免费领取</text>每人限{{num}}张</text>
+        </view>
+        <view class="coupon_list_right">
+            <text class="coupon_list_price">{{price}}</text>
+            <text>折</text>
+        </view>
+    </view>
+</template>
+<template name="youhui">
+    <view class="coupon_list">
+        <image src="/images/shareimg/test.png" class="coupon_img" />
+        <view class="coupon_list_center">
+            <text class="coupon_list_title">优惠券</text>
+            <text class="coupon_list_time">有效期{{data}}</text>
+            <text class="coupon_list_tj"><text class="list_color">免费领取</text>每人限{{num}}张</text>
+        </view>
+        <view class="coupon_list_right coupon_list_rights">
+            <text class="coupon_list_price">¥{{price}}</text>
+            <text>立减</text>
+        </view>
+    </view>
+</template>
+<view wx:if="{{isHaveConpon}}">
+    <view wx:for="{{couponList}}" wx:key="id">
+        <view wx:if="{{item.type == 1}}">
+            <template is="zhekou" data="{{...item}}"></template>
+        </view>
+        <view wx:else>
+            <template is="youhui" data="{{...item}}"></template>
+        </view>
+    </view>
+</view>
+<view wx:else class="prompt">
+    暂无可以领取的优惠卷
+</view>

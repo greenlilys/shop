@@ -1,0 +1,16 @@
+<form bindsubmit="formSubmit">
+    <view class="recharge">
+        <view class="recharge_top">
+            <text class="recharge_title">当前余额</text>
+            <text class="recharge_price">{{account.balance}}</text>
+        </view>
+         <view class="recharge_center">
+            <text class="recharge_title">充值金额</text>
+            <input type="number" name="money" placeholder="请输入充值的金额" bindinput="getMoney" />
+        </view>
+    </view>
+    <view class="recharge_fot">
+        <button type="primary" class="login-btn" form-type="submit">微信支付</button>
+        <navigator url="/pages/recharge_record/index"><button type="primary" class="login-jilu">充值记录</button></navigator>
+    </view>
+</form>

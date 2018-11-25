@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	div{
+		width:100px;
+		height:100px;
+		background:blue;
+		margin-top:10px;
+	}
+	
+</style>
+</head>
+<body>
+
+	<p>getElementsByClassName()有兼容问题 IE 678 不支持</p>
+	<div></div>
+	<div></div>
+	<div class="demo"></div>
+	<div></div>
+	<div></div>
+	<div id="text" class="bar">
+	   我的
+		<ul class="banner">
+			<li>22</li>
+		   <li>11</li>
+		   <li>55</li>
+	   </ul>
+	   <p class="ngb">895656</p>
+   </div>
+	<script>
+		window.onload = function(){
+
+             function getClass(clasName){
+             	if(document.getElementsByClassName){//判断是否支持
+             		return document.getElementsByClassName(clasName);
+             	};
+
+             	var arr = [];
+             	var dom = document.getElementsByTagName("*");
+               
+             	for(var i= 0; i < dom.length; i++){
+             		if(dom[i].className==className){
+             			arr.push(dom[i]);
+             		};
+             	};
+             	return arr;
+             };
+
+		}
+
+//children 获得当前元素节点的直接子元素节点的数组集合 childNodes获得当前元素的直接元素子节点，但是包含空格 文本节点
+var text = document.getElementById("text");
+console.log(text.children.length);
+
+for(var i = 0; i<text.children.length;i++){
+	console.log(text.children[i]);
+}
+
+//cloneNode复制节点，参数为true时为深复制，当前节点的所有子孙节点都会被复制下，参数为false则只复制当前节点
+var demo1 = text.cloneNode(false);
+console.log(demo1);
+
+//removeChild()删除节点
+//appendChild()添加元素节点。默认添加到末尾
+////insertBefore(需要插入的节点，参照节点) 在某节点之前添加节点
+
+var a = text.childNodes;
+for(var i = 0 ; i<a.length; i++){
+     if(a[i].nodeType == 3){
+     	console.log(a[i].nodeValue);
+     }
+}
+console.log(a.length)
+
+
+//nextElementSibling nextSibling下一个同级元素
+	//nextSibling只适用IE678
+	//previousSibling previousElementSibling
+	//firstChild firstElementChild
+	//lastChild lastElementChild
+
+</script>
+</body>
+</html>

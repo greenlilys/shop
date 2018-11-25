@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			margin:0;padding:0;
+		}
+		#box{
+			height:200px;
+			background-color:rgba(250,250,250,0.4);
+			text-align:center;
+			display:table-cell;
+			width:800px;
+			vertical-align:middle;				
+			
+		}
+		
+		#demo{
+			background:pink center no-repeat;
+		}
+	</style>
+</head>
+<body id="demo">
+	<div id="box">
+		<img src="../images/1.jpg" alt="" id="imgs" width="150">
+		<img src="../images/2.jpg" alt="" id="imgs" width="150">
+		<img src="../images/3.jpg" alt="" id="imgs" width="150">
+	</div>
+	
+	<script>
+		window.onload=function(){				
+			var bo = document.getElementById("demo");		
+			var imgs = document.getElementsByTagName("img");		 
+			for(var i = 0; i<imgs.length;i++){
+				imgs[i].onclick = function(){
+					bo.style.backgroundImage = "url("+this.src+")";
+				}
+			}
+
+		}
+	</script>
+</body>
+</html>

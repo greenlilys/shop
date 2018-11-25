@@ -1,0 +1,40 @@
+<view class="top">
+    <text class="top-t">可提现佣金(元)</text>
+    <view class="top-c">
+        <text>{{commission}}</text>
+        <navigator url="">
+            <text>查看明细</text>
+            <image src="/images/shareimg/fenxiaozx.png" />
+        </navigator>
+    </view>
+    <text class="top-f">成功提现佣金：{{commissioned}}</text>
+</view>
+<view class="center">
+    <view class="center-list">
+        <text>累计佣金</text>
+        <text class="center-price">{{totalCommission}}</text>
+        <text class="center-f">所有佣金</text>
+    </view>
+    <view class="center-list center-right">
+        <text>已申请佣金</text>
+        <text class="center-price">{{applyCommission}}</text>
+        <text class="center-f">已申请佣金</text>
+    </view>
+    <view class="center-list">
+        <text>待打款佣金</text>
+        <text class="center-price">{{passCommission}}</text>
+        <text class="center-f">审核通过的佣金</text>		
+    </view>
+    <view class="center-list center-right">
+        <text>未结算佣金</text>
+        <text class="center-price">{{frozenCommission}}</text>
+        <text class="center-f">结算期内的佣金</text>
+    </view>
+</view>
+<view class="fot">
+    <text>买家确认收货后，立即获得分销佣金。结算期（{{someDay}}）天后，佣金可提现。结算期内，买家退货，佣金将自动扣除。</text>
+    <text class="fot-zhuyi">注意：可用佣金满<text class="fot-color">{{getMoney}}</text>元后才能申请提现</text>
+</view>
+<navigator class="tijiao">
+    <button style="background:{{buttonColor}}" bindtap="getOutMoney">我要提现</button>
+</navigator>

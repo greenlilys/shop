@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+//offsetWidth offserHeight 得到对象自己的宽度和高度
+//在script中style.width只能得到行内样式的该属性
+//offsetWidth得到对象的宽度
+//offsetWidth = width + border +padding 
+//offsetHidth = width + border +padding 得到的宽高包括对象的边框和填充的宽度
+
+//offsetLeft offsetTOP 只有左和上  返回距离定位的父级盒子的距离
+//如果父级都没有定位，以body为准 offsetleft从父级的padding开始计算父级的border不算，就是子盒子到定位盒子边框到边框的距离
+
+//offsetTop与style.top区别
+// offsetTop可以用在没有定位的盒子上面，style.top只有定位的盒子才能用。因为只有定位的盒子才有属性top left等。
+//style.top只能得到行内样式该属性，返回值带单位px offsetTop返回值是一个数字类型，可以直接做加法运算
+//offserTop只读  style.top可以读写
+
+//offsetParent 返回该对象的带有定位的父级对象，如果父级对象都没有定位的。则返回body对象
+//parentNode 返回直接父级对象
+//obj.parentNode.tagName 返回直接父级的标签名
+
+		
+	</script>
+</body>
+</html>

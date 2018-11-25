@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能社——http://www.zhinengshe.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style>
+
+    </style>
+    <!-- <script src="vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        Vue.directive('color',function(el,binding){
+            console.log(binding)
+           el.style.background=binding.value;
+           // el.style = "background:" + binding.value
+        });
+
+        window.onload=function(){
+            var vm=new Vue({
+                el:'#box',
+                data:{
+                    a:'blue',
+                    list:[
+                        {
+                            b : 'red'
+                        },
+                        {
+                            b :'blue'
+                        }
+                    ]
+                }
+            });
+        };
+
+    </script>
+</head>
+<body>
+    <div id="box">        
+        <div v-color="value.b" v-for="value in list">123</div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

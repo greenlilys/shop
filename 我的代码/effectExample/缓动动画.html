@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	div{
+		width:100px;
+		height:100px;
+		background-color:black;
+		margin-top:50px;
+		position:absolute;
+	}
+</style>
+</head>
+<body>
+<input type="button" value="开始" id="btn">	
+<div id="div"></div>
+<script>
+
+var target = 500;
+var timer = null;
+	var btn = document.getElementById("btn");
+	var div = document.getElementById("div");
+	btn.onclick = function(){
+		timer = setInterval(function(){
+			var step = (target - div.offsetLeft)/10;
+			console.log(step)
+			step = step > 0? Math.ceil(step) : Math.floor(step);
+           div.style.left = div.offsetLeft + step + "px";
+           if(div.offsetLeft == target){
+           	clearInterval(timer);
+           }
+		},30)
+		
+	}
+</script>
+</body>
+</html>

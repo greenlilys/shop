@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+//根据位置返回字符串 
+var a = "hello word";
+var b = a.charAt(1);
+console.log(b);//e
+
+//stringObject.indexOf(searchvalue,fromindex)
+//根据字符串返回位置 如果要检索的字符串值没有出现，则该方法返回 -1。
+var c = a.indexOf("w");//从前向后找
+console.log(c);//4
+
+var d = a.lastIndexOf("r");//从后向前找
+console.log(d);
+
+//字符串拼接
+var str1 = "wang ";
+var result = str1.concat("dongwen");
+console.log(result);
+//等同于 
+var str2 = str1 + "dongwen";
+console.log(str2);
+
+//截取字符串
+var str3 = a.slice(1,7);
+var str5 = a.slice(-3);
+console.log(str5);
+console.log(str3);
+
+var str4 = a.substring(1,8);
+console.log(str4);
+
+//slice substring substr在只有一个参数的情况下都是从起始位置截取到末尾，但是substring不支持负数
+//slice substring在有两个参数的情况下意思都是从开始位置截取到结束位置的前一位，而substr第二个参数的意思是从开始位置需要截取的字符串数量
+//slice的第二个参数支持负数， substring substr第二个负数会被转化成0，此时substr意味着返回包含0个字符的字符串，也就是返回的是空字符串，substring会按照转化后的两个参数从小到大重新查找，因此第二个参数不要用负数
+//substring(6,3) 实际中会变成 substring(3,6)
+//substring(5,-3) 实际中会变成 substring(0,5)小数始终在前
+
+function add(num1,num2){
+   arguments[1] = 10;//每次执行这个函数都会重写第二个参数将第二个参数的值改为10，arguments对象中的值会自动反映到对应的命名参数，所以修改了arguments[1]也就修改了num2，结果他们的值都会变成10，但这两个值访问的内存空间还是独立的，只是值会同步。如果只传递一个参数那么arguments[1]的值不会反映到命名参数中，因为arguments对象的长度是由传入的参数个数决定的，不是由定义函数时的命名参数个数决定，此时num2中保存的是undefined，在严格模式下重写arguments会导致语法错误
+   console.log(arguments[0] + num2);
+}
+add(20,30);//30
+//保留小数点后几位数字
+var str5 = 13.68;
+var result1 = str5.toFixed(1);
+console.log(result1);
+
+var result2 = str5.toFixed(3);
+console.log(result2);
+
+var PI = 3.1415926;//常量大写
+var str6 = PI + "";
+
+//数组方法splice(),改变原数组
+//splice()方法始终都会返回一个数组，该数组中包含从原始数组中删除的项，如果没有删除任何项，则返回一个空数组
+var color = ["green","bule"];
+var removed = color.splice(1,0,"yellow","orange");
+console.log(removed);//空数组
+console.log(color);
+
+var color1 = ["red","yellow"];
+var removed = color1.splice(1,1,"orange","black");
+console.log(color1);
+console.log(removed);//yellow
+
+//数组concat()方法 会创建当前数组一个副本，然后把接收到的参数添加到这个副本的末尾，最后返回创建的新数组，不会改变原数组
+//数组slice()方法 用法与字符串中的方法相同，该方法截取数组中的项，接收1到2个参数，返回从原数组中截取的项，不改变原数组
+//数组方法indexOf()和lastIndexOf() 位置方法。这两个方法都接收两个参数，要查找的项和查找的起始位置索引，indexOf()从左向右查找，lastIndexOf()从右向左查找，没找到时返回-1
+//数组的栈方法pusu()  pop() 实现后进先出
+//push()方法接收任意数量的参数，把它们添加到数组末尾，返回修改后数组的长度，就是length的值
+var arr = [];
+var len = arr.push("jack","koro");
+console.log(len);//2
+//pop()方法从数组末尾移除一项，返回移除的项，减少数组的长度
+var arr1 = arr.pop();
+console.log(arr1);//koro
+
+//数组的队列方法 先进先出 shift() 该方法移除数组中的第一项并返回该项
+//该方法与push()方法配合实现先进先出
+//unshift()方法可以在数组开头添加任意个项并返回新数组的长度，同时用unshift()方法和pop()方法可以从相反的方向模拟队列
+
+
+var arr2 = ["jack","wofe","titk"] ;
+console.log(arr2.join('|'));// "jack|wofe|titk"
+console.log(arr2.join(''));//"jackwofetitk"
+console.log(arr2.join(' '));//"jack wofe titk"
+console.log(arr2);
+//数组转换为字符串 toString()  join(",")
+console.log(arr2.toString());
+console.log(arr2.join(''));
+
+//字符串转换为数组 split() 字符串里面的分隔符与split()里面的分隔符保持一致
+var str7 = "aa,bb,cc";
+var arr3 = str7.split(" ");//["aa,bb,cc"]
+str7.split("");//["a", "a", ",", "b", "b", ",", "c", "c"]
+str7.split(",")//["aa","bb","cc"]
+console.log(arr3);
+
+
+var str8 = "a";
+var arr4 = str8.split("");
+console.log(arr4);//["a"]
+
+var aa=[1,2,3]; 
+aa.toLocaleString() //"1,2,3" 
+aa.toString()//"1,2,3"
+
+var num3=1234;
+num3.toString();//"1234"
+num3.toLocaleString();//"1,234"
+
+var sd=new Date();  
+sd.toLocaleString();//"2017/2/15 上午11:21:31" 
+sd.toString();//"Wed Feb 15 2017 11:21:31 GMT+0800 (CST)"
+
+//arrayObject.reverse();
+//方法用于颠倒数组中元素的顺序。而不会创建新的数组。
+
+var msgg = 'Hello Vue.js!';
+console.log(msgg.split(''));
+
+var o1 = { a: 1 };
+var o2 = { b: 2 };
+var o3 = { c: 3 };
+
+var obj = Object.assign(o1, o2, o3);
+console.log(obj); // { a: 1, b: 2, c: 3 }
+console.log(o2);  // { a: 1, b: 2, c: 3 },
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<view class="comp-search">
+    <view class="search-wrap">
+        <icon size="15" type="search" />
+        <input id="search" value="{{inputContent}}" bindinput="bindChange" bindconfirm="searchList" focus="true" name="input" placeholder="请输入搜索关键词" confirm-type="search" />
+        <view class="cross {{inputContent == '' ? 'hide' : ''}}" bindtap="clearSearch">×</view>
+    </view>
+</view>
+
+<view class="filter {{showResult?'':'hide'}}">
+    <view class="tab {{tab == 0 ? 'active' : ''}}" bindtap="sortByDefault">综合</view>
+    <view class="tab {{tab == 1 ? 'active' : ''}}" bindtap="sortBySales">销量</view>
+    <view class="tab {{tab == 2 ? 'active' : ''}} tab-price" data-direction="{{direction}}" bindtap="sortByPrice">价格
+        <text class="up {{direction === 0 ? 'sub-active': ''}}">▲</text>
+        <text class="down {{direction === 1 ? 'sub-active': ''}}">▼</text>
+    </view>
+</view>
+
+<scroll-view data-curpage="{{pageData.current_page}}" class="{{itemStyle == 1 ? 'container' : 'colume-2'}} {{showResult?'':'hide'}}"
+             scroll-y="true" bindscrolltolower="getMoreItems" enable-back-to-top="true" lower-threshold="50">
+    <view class="item" catchtap="turnToDetail" wx:for="{{itemsList}}" wx:key="" data-id="{{item.id}}"
+          data-goods-type="{{item.goods_type}}" data-contact="{{item.customFeature.ifUseContact}}">
+        <image class="item-pic" src="{{item.original_img}}"></image>
+        <view class="item-detail">
+            <view class="item-title">{{item.good_name}}</view>
+            <view class="item-price">￥
+                <text>{{item.current_price}}</text>
+            </view>
+            <text class="item-sales">销量：{{item.sales_sum}}</text>
+        </view>
+    </view>
+    <view class="nomore {{pageData.is_more == 0 ? '' : 'hide'}}">没有啦！~</view>
+</scroll-view>
+<view class="history {{showResult?'hide':''}}">
+    <view class="title">
+        <text class="left">历史搜索</text>
+        <text class="right" bindtap="clearHistory">清除</text>
+    </view>
+    <view class="content">
+        <view class="history-item" wx:for="{{history}}" wx:key="" data-tag="{{item}}" bindtap="quickSearch">{{item}}</view>
+    </view>
+</view>
+
+<view class="side-page" animation="{{animationData}}">
+    <scroll-view class="filter-wrap" scroll-y="true">
+        <view class="filter-cate">
+            <view class="filter-title">分类</view>
+            <view class="cate filter-item {{currentCategory == item.id ? 'active' : ''}}" wx:for="{{cateData}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-idx="category" catchtap="setCategoryFilter">{{item.name}}</view>
+        </view>
+    </scroll-view>
+    <view class="button-wrap">
+        <view class="cancel-btn" catchtap="hideFilter">取消</view>
+        <view class="confirm-btn" catchtap="confirmFilter">确定</view>
+    </view>
+</view>

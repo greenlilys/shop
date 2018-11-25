@@ -1,0 +1,26 @@
+<view>
+    <label class="radio" wx:for="{{addressList}}" wx:key="id">
+        <view class="curr">
+            <view bindtap="chooseAddress" data-address-id="{{item.id}}">
+                <text decode="{{true}}" class="curr-title">收货人：{{item.realname}}&nbsp;&nbsp;{{item.mobile}}</text>
+                <text class="order-add1">收货地址：{{item.province}}{{item.city}}{{item.area}}{{item.address}}</text>
+            </view>
+
+            <view class="address-cz">
+                <view class="radio" data-curType="{{item.isdefault}}" data-address-id="{{item.id}}" data-index="{{index}}" bindtap="change">
+                    <icon type="{{item.isdefault? 'success' : 'circle'}}" size="18" color="{{item.isdefault? '#CB2527' : '#999'}}" />
+                    <text class="default">设为默认</text>
+                </view>
+                <view class="bianji" bindtap="editAddress" data-address-id="{{item.id}}" data-index="{{index}}">
+                    <image src="/images/gladdress/bj.png" class="bianji-img" />
+                    <text>编辑</text>
+                </view>
+                <text data-address-id="{{item.id}}" class="dele" catchtap="removeAddress">删除</text>
+            </view>
+        </view>
+    </label>
+</view>
+
+<navigator url="/pages/newAddre/index">
+    <view class="add">+新建收货地址</view>
+</navigator>

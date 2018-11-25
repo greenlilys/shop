@@ -1,0 +1,44 @@
+.infor-name {
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    padding: 0 5%;
+    border-bottom: 1rpx solid #ddd;
+}
+.infor-name text{
+    float: left;
+    font-size: 12pt;
+    color: #333;
+}
+.infor-name .picker{
+    font-size: 12pt;
+    color: #333;
+}
+.infor-tele {
+    height: 100rpx;
+    line-height: 100rpx;
+    float: left;
+    border: 0;
+    margin-left: 20rpx;
+    color: #a5a5a5;
+    font-size: 11pt;
+}
+.radio {
+    color: #666;
+}
+.line {
+    width: 100%;
+    background: #efefef;
+    height: 20rpx;
+}
+.ture{
+    width: 90%;
+    height: 80rpx;
+    text-align: center;
+    margin: 50rpx auto;
+}
+.ture button{
+    width: 100%;
+    height: 80rpx;
+    font-size: 13pt;
+}

@@ -1,0 +1,40 @@
+<view class="infor-name">
+    <text>姓名：</text>
+    <input class="infor-tele" placeholder="请输入您的姓名" value="{{personData.name}}" bindinput="getName" />
+</view>
+<view class="infor-name">
+    <text>性别：</text>
+    <view class="infor-tele">
+        <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{personData.genders.length>0? personData.genders : items}}" wx:key="*this">
+                <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+            </label>
+        </radio-group>
+    </view>
+</view>
+<view class="infor-name">
+    <picker mode="date" value="{{personData.birthday || date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+            生日：{{personData.birthday || date}}
+        </view>
+    </picker>
+</view>
+<view class="line"></view>
+<view class="infor-name">
+    <text>手机号：</text>
+    <input class="infor-tele" placeholder="请输入您的手机号" value="{{personData.mobNum}}" bindinput="getMobNum" />
+</view>
+<view class="infor-name">
+    <text>微信号：</text>
+    <input class="infor-tele" placeholder="请输入您的微信号" value="{{personData.wxNum}}" bindinput="getWxNum" />
+</view>
+<view class="infor-name">
+    <picker mode="region" bindchange="bindRegionChange" value="{{personData.address || region}}" custom-item="{{customItem}}">
+        <view class="picker">
+            所在城市： {{personData.address[0] || region[0]}},{{personData.address[1] || region[1]}},{{personData.address[2]||region[2]}}
+        </view>
+    </picker>
+</view>
+<view class="ture">
+    <button type="primary" bindtap="primary">确认修改</button>
+</view>

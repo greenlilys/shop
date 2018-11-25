@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<!--声明当前页面的编码集charset=gbk中文编码gb2312,charset=utf-8 国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<!--当前页面的三要素-->
+		<title>标题</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="描述">	
+		<!--css , js-->
+<style type="text/css">
+	*{margin:0px; padding:0px;}
+	/*css语法规则: 属性:值; 颜色:红色; 宽度:100cm; px像素*/
+	.flash{width:100%; height:400px; /* overflow:hidden;超出部分内容隐藏*/
+			position:relative;/*相对定位*/}
+	.flash ul.con li{list-style-type:none;/*去掉圆点*/ width:100%; height:400px; 
+					position:absolute; left:0px; top:0px;}
+	.flash ul.but{ width:100px; position:absolute;/*绝对定位*/
+				top:350px; left:45%; z-index:222;}
+	.flash ul.but li{width:13px; height:13px; display:inline-block;
+					background:url("images/dot.png") -13px 0px;}
+	.flash ul.but li.current{background:url("images/dot.png") 0px 0px;}
+
+</style>
+
+	</head>
+<body>
+<!--div 盒子模型，高度，宽度 放内容   姓名="张三"-->	
+<div class="flash">
+	<!--图片展示开始-->
+	<ul class="con">
+		<li style="background:url('images/img1.jpg') center; z-index:11">0</li>
+		<li style="background:url('images/img2.jpg') center">1</li>
+		<li style="background:url('images/img3.jpg') center">2</li>
+		<li style="background:url('images/img4.jpg') center">3</li>
+	</ul>
+	<!--图片展示结束-->
+
+	<!--按扭开始-->
+	<ul class='but'>
+		<li class="current"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<!--按扭结束-->
+</div>
+
+<!--引用外部文件 jquery类库-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	var index=0;
+	var playCount=null;
+
+	$(".but li").hover(function(){
+		clearInterval(playCount);//当我滑动时，要停止之前动画
+		//给按扭添加样式，改变背景图片,并且除了本身之外的，同级的无素li 去掉样式 current
+		$(this).addClass("current").siblings().removeClass('current');
+		index=$(this).index();
+		//显示对应的序列号的内容，并且隐藏其它的
+		$(".con li").eq(index).fadeIn().siblings().fadeOut();
+		//alert(index);
+		
+	}).mouseout(function(){
+		auto_play();
+	});
+
+	//利用函数方法，实现自动播放
+	function auto_play(){
+	//设置自动播放函数
+	playCount=setInterval(function(){
+		index++;
+		if(index>3){index=0;}//判断，当序列号超出我们的序列号时，设置为0
+		//alert("自动播放的序列号"+index);
+		$(".but li").eq(index).addClass("current").siblings().removeClass("current");
+		$(".con li").eq(index).fadeIn().siblings().fadeOut();
+	},3000);
+		
+
+	};
+	
+	auto_play();//调用方法
+
+</script>
+
+
+<!--
+	1、在页面当中，构建了一个长方形的div盒子模型， 宽度 100%  高度 400像素...
+	2、解决了一个兼容型问题，把页面当中所有元素的外边距，在最开始处，设置为0px;
+	3、利用ul 无序列表来布局，并给li添加对应的高度和宽度，还解决了一个兼容型问题，padding 内边距...
+	4、我们发现，图片太大，不能直接插入，会现滚动条，所以我们做成背景图片，并且设置背景图水平距中
+	5、当内容(图片)的高度，超出设置的外面的盒子的高度，就隐藏 overflow:hidden;
+	6、利用ul 制作按扭,并且讲到相对和绝对定位。来控制他的位置 
+	7、给按扭添加背景图片，通过控制背景图片的位置，来显示我们所需要图片
+	8、轮播过程出现了空白，通过定位来解决
+-->
+</body>
+</html>

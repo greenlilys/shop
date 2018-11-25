@@ -1,0 +1,45 @@
+<import src="shopTemp/shopTemp.wxml" />
+<view class="container">
+    <view id="banner">
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" indicator-color="black" indicator-active-color="#fff">
+            <block wx:for="{{Carousels}}" wx:key="id">
+                <swiper-item>
+                    <image src="{{item.thumb}}" class="slide-image"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="nav">
+        <block wx:for="{{navList}}" wx:key="id">
+            <template is='navList' data="{{item}}"></template>
+        </block>
+    </view> 
+     <view class="section">
+        <input type="text" placeholder="请输入关键字"  bindinput="searchInput" bindconfirm="searchList" confirm-type="done" class="cate-input" />
+        <button bindtap="search" class="btn auto" bindconfirm="search">
+            <image src="/images/home/search.png" mode="widthFix"></image>
+        </button>
+    </view>
+    <view class="modules">
+        <view wx:for="{{moduleList}}" wx:key="id">
+            <template is="moduleList" data="{{item}}"></template>
+        </view>
+    </view>
+    <view class="modules">
+        <view class="sq-title add">
+            <image src="/images/home/redxin.png" mode="widthFix"></image>
+            <text class="title">猜你喜欢</text>
+            <navigator class="more" bindtap="navToArea">更多</navigator>
+        </view>
+        <view class="modBox">
+            <block wx:for="{{loveShop}}" wx:key="id">
+                <template is="loveShop" data="{{item}}"></template>
+            </block>
+        </view>
+    </view>
+    <view class="loadmore" hidden="{{isHideLoadMore}}">
+        <view class="loading"></view>
+        <view class="loadmore_tips">正在加载</view>
+    </view>
+    <view hidden="{{dixian}}" class="dixian">没有啦！</view>
+</view>

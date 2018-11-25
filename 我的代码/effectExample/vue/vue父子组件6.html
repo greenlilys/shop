@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+	<div id="box">
+		<aaa>
+		</aaa>
+	</div>
+
+	<template id="aaa">
+	<div>		
+		<span>我是父级 -> {{msg}}</span>
+		<bbb v-on:send="get"></bbb>
+	</div>
+	</template>
+	<template id="bbb">
+	<div>		
+		<h3>子组件-</h3>
+		<input type="button" value="send" @click="send">
+	</div>
+	</template>
+	<script>
+		var vm=new Vue({
+			el:'#box',
+			data:{
+				a:'aaa'
+			},
+			components:{
+				'aaa':{
+					data(){
+						return {
+							msg:111,
+							msg2:'我是父组件的数据'
+						}
+					},
+					template:'#aaa',
+					methods:{
+						get(val){
+							// alert(msg);
+							this.msg=val;
+						}
+					},
+					components:{
+						'bbb':{
+							data(){
+								return {
+									a:'我是子组件的数据'
+								}
+							},
+							template:'#bbb',
+							methods:{
+								send(){
+									console.log(this)
+									this.$emit('send',this.a);
+								}
+							}
+						}
+					}
+				}
+			}
+		});
+
+	</script>
+</body>
+</html>

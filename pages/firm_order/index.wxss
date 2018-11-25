@@ -1,0 +1,281 @@
+page {
+    background: #efefef;
+}
+.order_top{
+    width: 100%;
+    background: #FFF;    
+    margin-top: 20rpx;
+}
+.order_top_t{
+    width: 100%;
+    height: 150rpx;
+    background: #606e8b;
+}
+.order_top_t image{
+    float: left;
+    width: 80rpx;
+    height: 80rpx;
+    margin:40rpx 20rpx 0 40rpx;
+}
+.order_top_tr{
+    float: left;
+    margin-top:30rpx;
+}
+.order_top_tr text{
+    font-size: 11pt;
+    color: #FFF;
+    display: block;
+    margin-top: 6rpx;
+}
+.add {
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 0 auto;
+    background: #cb2527;
+    border-radius: 10rpx 10rpx;
+    position: relative;
+    bottom: 0;
+    color: #fff;
+    font-size: 12pt;
+    text-align: center;
+	margin-top:20rpx;
+}
+
+.order_center{
+    width: 100%;
+    height:500rpx;
+    background: #FFF;
+    margin-top: 20rpx;
+}
+.order_center_t{
+    width: 90%;
+    height:100rpx;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #ddd;
+}
+.order_center_t image{
+    width:50rpx;
+    height:50rpx;
+    float: left;
+    margin:30rpx 30rpx 0 10rpx;
+}
+.order_center_t text{
+    font-size: 14pt;
+    float: left;
+    color: #000;
+    margin-top:30rpx;
+}
+.order_center_c{
+    width: 675rpx;
+    margin:0 auto;
+    height: 150rpx;
+    padding:20rpx 0;
+    border-bottom: 2rpx solid #ddd;
+}
+.order_center_cl{
+    width: 150rpx;
+    height: 150rpx;
+    float: left;
+}
+.order_center_cl image{
+    width: 150rpx;
+    height: 150rpx;
+}
+.order_center_cc{
+    width:505rpx;
+    float: left; 
+	height:150rpx;  
+	  margin-left:20rpx;
+	  display:flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+}
+
+.order_center_cc .order_center_title{
+
+    font-size: 12pt;
+    color: #333;
+    display: -webkit-box; 
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+.priceBox .order_center_crp{    
+    
+	color:#CB2527;   
+}
+.priceBox{
+	display:flex;
+	  flex-direction: row;
+	  align-items:center;
+	  font-size: 12pt;
+	 
+}
+.typeCentent{
+	margin-right:30rpx;
+color: #333;
+}
+.order_center_fot .order_center_liuyan{
+    width:90%;
+    height:90rpx;    
+    margin:0 auto;
+}
+.order_center_fot{
+	padding-top:20rpx;
+}
+.order_center_liuyan input{
+    background: #eee;
+    height:80rpx;
+    font-size: 11pt;
+    color:#999;
+    padding-left: 3%;
+    border: 2rpx solid #ddd;
+    border-radius: 10rpx 10rpx;
+}
+.order_center_heji{
+    width:90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin:0 auto;
+}
+.order_center_heji text{
+    font-size: 12pt;
+    color: #999;
+    float: right;
+}
+.order_center_heji .list_color{
+  color:#CB2527; 
+} 
+ .center_fot_list{
+    width: 90%;
+    height:60rpx;
+    margin: 0 auto;
+}
+.center_fot_list text{
+    font-size: 11pt;
+    color: #666;
+}
+.center_fot_listl{
+    float: left;
+}
+.center_fot_listr{
+    float: right;
+}
+.order_fot{
+    width: 100%;
+    height: 140rpx;
+    background: #FFF;
+    margin-top:20rpx; 
+    padding-top:40rpx; 
+}
+.order_btn{
+    width: 100%;
+    margin-top: 30rpx;
+    background: #FFF;
+}
+.order_btn .order_btn_fot{
+    width:90%;
+    margin:0 auto;
+    height:120rpx;
+}
+.order_btn .order_btn_fot text{
+    float:right;
+    color: #e76625;
+    font-size: 13pt;
+    line-height:120rpx;
+}
+.order_btn .order_btn_fot .order_queren{
+    color: #FFF;
+    font-size: 13pt;
+    padding:0 15rpx;
+    line-height:80rpx;
+    margin:20rpx 10rpx 0 30rpx;
+    border-radius:12rpx 12rpx;
+    background: #e76625;
+}
+
+
+.curr {
+    width: 676rpx;
+    padding: 20rpx 37rpx 20rpx 37rpx;
+    margin: 0rpx auto;
+    margin-bottom: 20rpx;
+    background: #fff;
+	position:relative;
+}
+.curr .arrow{
+	width:60rpx;
+	height:60rpx;
+	position:absolute;
+	right:20rpx;
+	top:50rpx;
+}
+.curr .curr-title {
+       font-size:12pt;
+    color: #666;
+    padding:12rpx 0;
+    
+}
+
+.curr .order-add1{
+    font-size:10pt;
+    color: #666;
+    padding-bottom:12rpx;
+ 
+}
+
+.curr text {
+    display: block;
+}
+
+.address-cz {
+    width: 100%;
+    font-size: 12pt;
+    color: #666;
+    padding:20rpx 0;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+    
+}
+
+.address-cz .radio {
+    float: left;
+    width:38%;
+	text-align: center;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+}
+.radio text{
+margin-left:10rpx;
+}
+
+.address-cz .bianji {
+    width:40%;
+    float: left;
+    margin-left: 30rpx;
+}
+
+.address-cz .bianji-img {
+    width:30rpx;
+    height:30rpx;
+    float: left;
+    margin:6rpx 10rpx 0 0; 
+}
+
+.address-cz .bianji text {
+    float: left;
+    font-size: 11pt;
+}
+
+.dele {
+    margin-left: 20rpx;
+    z-index: 1000;
+}
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+<div id="content" v-html="str">
+	
+</div>
+	<script>
+		var vm = new Vue({
+			el : '#content',
+			data:{
+				str:`<span>123</span>`
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!-- <view class="message_top">
+    <image src="/images/shareimg/return.png" />
+    <text>消息提醒设置</text>
+</view> -->
+<!-- <view class="message_shop">
+    <text>商城信息提醒</text>
+</view> -->
+<view class="message_list">
+    <text>订单提交通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>自提订单通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>订单取消通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>购买成功通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>订单发货通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>订单收货通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>退款申请通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>退款结果通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>会员升级通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>充值成功通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>充值退款通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>提现申请通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>提现成功通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>提现失败通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_shop">
+    <text>分销信息提醒</text>
+</view>
+<view class="message_list">
+    <text>成为分销商通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>等级提升通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>新增下线通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>下线付款通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>下线收货通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>提现申请通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>提现处理通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>
+<view class="message_list">
+    <text>商家打款通知</text>
+    <view class="body-view">
+        <switch checked bindchange="switch1Change" />
+    </view>
+</view>

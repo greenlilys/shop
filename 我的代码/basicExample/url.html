@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+//我们知道一个网址 自己的网址，   不同页面也有自己id网址， 我们经常会做一些， 把网址送入到后台。  但是后台再处理的 不认识比如 换行啊 等特殊符号的  ？ 所以我们要实现编码，然后再传到后台。 
+ 
+//encodeURIComponent()函数可以把字符串作为URL组件进行编码
+//decodeURIComponent() 函数可把字符串作为 URI 组件进行解码
+	var url = "http://baidu.com"
+	
+	var result = encodeURIComponent(url);//编码
+	console.log(result);
+	var result1 = decodeURIComponent(result);//解码
+	console.log(result1);
+</script>
+</body>
+</html>

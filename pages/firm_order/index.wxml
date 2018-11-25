@@ -1,0 +1,69 @@
+<view class="order_top_t">
+    <image src="/images/firm_order/order_detail_ord.png" />
+    <view class="order_top_tr">
+        <text>确认订单后请尽快付款</text>
+        <text>过时订单将自动取消</text>
+    </view>
+</view>
+
+<view class="order_top">
+    <navigator url="/pages/newAddre/index" wx:if="{{selectAddress.length}}">
+        <view class="add">+新建收货地址</view>
+    </navigator>
+    <navigator url="/pages/myAddress/index?firmOrder=true" wx:else>
+        <label class="radio">
+            <view class="curr">
+                <text decode="{{true}}" class="curr-title">收货人：{{selectAddress.realname}}&nbsp;&nbsp;{{selectAddress.mobile}}</text>
+                <text class="order-add1">收货地址：{{selectAddress.province}}{{selectAddress.city}}{{selectAddress.area}}{{selectAddress.address}}</text>
+				<image src="/images/firm_order/next.png" class="arrow"></image>            
+            </view>
+        </label>
+    </navigator>
+</view>
+<view class="order_center">
+    <view class="order_center_t">
+        <image src="/images/firm_order/order_detail_liwu.png" />
+        <text>{{shopName}}</text>
+    </view>
+    <view class="order_center_c" wx:for="{{productList}}" wx:key="id" wx:for-item="product">
+        <view class="item">
+            <image src="{{product.thumb}}" class="order_center_cl" />
+            <view class="order_center_cc">
+                <text class="order_center_title">{{product.title}}</text>
+                <view class="priceBox">
+                    <text hidden="{{!product.specName}}" class="typeCentent">规格：{{product.specName}}</text>
+                    <text class="order_center_crp">¥:{{product.price}}</text>
+                    <text class="order_center_crp">数量:{{product.num}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="order_center_fot">
+        <view class="order_center_liuyan">
+            <input type="text" placeholder="给卖家留言" bindinput="leaveMessage" />
+        </view>
+        <view class="order_center_heji">
+            <text>共{{allCount}}件商品 合计：<text class="list_color">¥{{allProductPrice}}</text></text>
+        </view>
+    </view>
+</view>
+<view class="order_fot">
+    <view class="center_fot_list">
+        <text class="center_fot_listl">+运费：</text>
+        <text class="center_fot_listr">¥{{freight}}</text>
+    </view>
+    <view class="center_fot_list">
+        <text class="center_fot_listl">总金额：</text>
+        <text class="center_fot_listr">¥{{allMoney}}</text>
+    </view>
+
+</view>
+<view class="order_btn">
+    <view class="order_btn_fot">
+
+        <text catchtap="submitForm" class="order_queren">确认订单</text>
+        <text>需付： ¥{{allMoney}}元</text>
+    </view> 
+
+</view>

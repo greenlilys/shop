@@ -1,0 +1,48 @@
+<view class="cart-head">
+    <view class="cart-head-left">
+        <view class="shoppingCart-edit-btn" hidden="{{ editing }}" bindtap="switchToEdit">编辑</view>
+        <view class="shoppingCart-edit-complete" hidden="{{ !editing }}" bindtap="editComplete">完成</view>
+    </view>
+    <view class="cart-head-right">
+        <text bindtap="deleteGoods">删除</text>
+        <text bindtap="removeFav">移至收藏夹</text>
+    </view>
+</view>
+<view class="cart-box">
+    <view class="item" wx:for="{{goodsList}}" wx:key="id">
+        <icon type="{{item.selected ? 'success': 'circle' }}" size="26"  data-index="{{index}}" color="{{item.selected ? '#E43A3D':''}}" bindtap="clickSelectGoods" />
+        <image src="{{item.img}}" class="goods-img" />
+         <view class="goods-info">
+             <view class="goods-name">{{item.good_name}}</view> 
+             <view class="goods-type">{{item.spec_key_name}}</view>
+             <view class="priceBox">
+                <text class="goods-price">￥{{item.good_price}}</text>
+                <view class="num-box">
+                    <view class="btn-groups">
+                        <button class="goods-btn" hidden="{{ !editing}}" data-index="{{index}}" data-num="{{item.good_num}}" bindtap="clickMinusButton">-</button>
+                        <view class="num">{{item.good_num}}</view>
+                        <button class="goods-btn" hidden="{{ !editing}}" data-index="{{index}}"  data-num="{{item.good_num}}" bindtap="clickPlusButton">+</button>
+                    </view>
+                </view>
+            </view>
+        </view> 
+    </view>
+</view>
+<view class="cart-fixbar">
+    <view class="allSelect" bindtap="clickSelectAll">
+        <icon type="{{selectAll ? 'success': 'circle'}}" size="26" color="{{selectAll ? '#E43A3D':''}}" />
+        <view class="allSelect-text">全选</view>
+    </view>
+    <view class="count">
+        <text>合计：￥</text>{{priceToPay}}
+    </view>
+    <button class="order {{ editing ? 'disabled' : '' }}"  bindtap="submitCartOrder">
+        去结算
+        <text class="allnum">({{goodsCountToPay}})</text>
+    </button>
+</view>
+<view class="loadmore" hidden="{{isHideLoadMore}}">
+    <view class="loading"></view>
+    <view class="loadmore_tips">正在加载</view>
+</view>
+<!-- <view hidden="{{dixian}}" class="dixian">我是有底线的</view> -->

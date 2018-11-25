@@ -1,0 +1,26 @@
+<view class="share-top">
+    <image src="/images/my_shop/share_erweima.png" />
+</view>
+<view class="share-bottom">
+    <view class="share-bottom-title">
+        <image src="/images/my_shop/share_icon.png" />
+        <text>如何赚钱</text>
+    </view>
+    <view class="share-botton-center">
+        <view>
+            <text class="bottom-center-title">第一步</text>
+            <text>转发商品链接或商品图片给微信好友；</text>
+        </view>
+        <view>
+            <text class="bottom-center-title">第二步</text>
+            <text>从您转发的链接或图片进入商城的好友，系统将自动锁定成为您的客户，他们在小程序商城中购买任何商品，您都可以获得分销佣金；</text>
+        </view>
+        <view>
+            <text class="bottom-center-title">第三步</text>
+            <text>您可以在分销中心查看【我的团队】和【分销订单】，好友确认收货后佣金方可体现。</text>
+        </view>
+    </view>
+    <view class="share-bottom-foot">
+        <text>说明：分享后会带有独有的推荐码，您的好友访问之后，系统会自动检测并记录客户关系。如果您的好友已被其他人抢先发展成了客户，他就不能成为您的客户，以最早发展成为客户为准。</text>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="checkbox" name="check" value="1" checked="checked">	
+<input type="checkbox" name="check" value="2" >	
+<input type="checkbox" name="check" value="3" checked="checked">	
+<input type="button" value="个数" id="btn">
+
+<script>
+	window.onload =function(){
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			var arr = new Array();
+			var item = document.getElementsByName("check");
+			for(var i =0; i<item.length; i++){
+				if(item[i].checked){
+					arr.push(item[i].value);
+				}
+			}
+			alert(arr.length+"个")
+		}
+		var che = $("input[checked]");
+		console.log(che.length);
+	}
+</script>
+<script src="../src/jquery/jquery-3.2.1.min.js"></script>	
+</body>
+</html>

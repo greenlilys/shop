@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+*{margin:0;
+	padding:0;
+}
+#run{
+  width:100px;
+  height:100px;
+  background-color:blue;
+  position:absolute;
+  left:0;
+}
+</style>
+
+</head>
+<body>
+	<button id="btn1">200</button>
+	<button id="btn2">400</button>
+     <div id="run"></div>
+<script>
+	function $(id){
+		return document.getElementById(id);
+	}
+  
+	$("btn1").onclick = function(){
+
+		animate($("run"),200);
+
+	}
+
+	$("btn2").onclick = function(){
+		animate($("run"),400);
+	}
+
+	function animate(obj,target){
+		 clearInterval(obj.timer);
+
+		var speed = obj.offsetLeft < target ? 5 : -5;
+        
+		obj.timer = setInterval(function(){
+			var result = target - obj.offsetLeft;	
+			
+			if(Math.abs(result)>=5){
+				obj.style.left = obj.offsetLeft + speed + "px";
+				
+			}else{
+				clearInterval(obj.timer);
+               obj.style.left = target + "px";
+			}
+			
+		},30)
+	}
+
+</script>
+</body>
+</html>

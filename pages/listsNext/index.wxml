@@ -1,0 +1,28 @@
+<view class="containerd">
+    <view class="head">
+        <text>男孩</text>
+        <image src="/images/listsNext/next.png" bindtap="popChoose"></image>
+        <view class="pop" hidden="{{isShow}}">
+    <text wx:for="{{condition}}" data-index="{{index}}" bindtap="chooseCondition" class="{{conIndex == index ? check : ''}}">{{item}}</text>
+          
+        </view>
+    </view>
+    <view class="nav">
+        <text wx:for="{{titleList}}" class="{{numIndex == index ? active : ''}}" data-index="{{index}}" bindtap="clickChoose">{{item}}</text>
+    </view>
+    <view class="modules">
+        <scroll scroll-y="true" style="height:{{windowHeight}}px; width:{{windowWidth}}px;" bindscrolltolower="lower" upper-threshold="10px" lower-threshold="10px">
+            <view class="modBox">
+                <block wx:for="{{shopList}}" wx:key="id">
+                    <view class="pro-list">
+                        <navigator url="/pages/detail/index?id={{item.id}}">
+                            <image src="{{item.img}}" mode="widthFix"></image>
+                            <text class="pro-name">{{item.name}}</text>
+                            <view class="price">¥{{item.price}}</view>
+                        </navigator>
+                    </view>
+                </block>
+            </view>
+        </scroll>
+    </view>
+</view>

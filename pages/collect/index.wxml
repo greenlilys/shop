@@ -1,0 +1,31 @@
+<view class="collect_top">
+    <view class="collect_topl">
+        <text>我的收藏({{checkedItem.length}})</text>
+    </view>
+    <text class="collect_topr" catchtap="removeFavorites">删除</text>
+</view>
+<view class="collect_list">
+    <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{goodList}}" wx:key="id">
+            <checkbox value="{{item.id}}" checked="{{item.checked}}">
+                <view class="collect_list_center">
+                    <image src="{{item.original_img}}" />
+                    <view class="collect_list_centerc">
+                         <view class="collect_center_title"><text>{{item.good_name}} {{item.color}}</text></view>
+                        <view class="priceBox">
+                            <text class="nowPrice">¥{{item.current_price}}</text>
+                            <text class="collect_line">¥{{item.old_price}}</text>
+                        </view> 
+                    </view>
+                </view>
+            </checkbox>
+        </label>
+    </checkbox-group>
+</view>
+<view class="loadmore" hidden="{{isHideLoadMore}}">
+    <view class="loading"></view>
+    <view class="loadmore_tips">正在加载</view>
+</view>
+<view hidden="{{dixian}}" class="dixian">我是有底线的</view>
+
+

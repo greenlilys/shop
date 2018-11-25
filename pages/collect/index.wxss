@@ -1,0 +1,147 @@
+page {
+    background: #efefef;
+}
+
+.collect_top {
+    width: 90%;
+	margin:0 auto;
+    height: 100rpx;
+    border-bottom: 2rpx solid #ddd;
+    font-size: 13pt;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:space-between;
+}
+
+.collect_topl {
+    float: left;
+}
+
+.collect_topl text {
+
+    float: left;
+}
+
+.collect_topr {
+    float: right;
+    
+    border: 2rpx solid #ddd;
+    border-radius: 10rpx 10rpx;
+    background: #fff;
+    padding: 8rpx 20rpx;
+}
+
+.checkbox {
+    width: 90%;
+    padding: 0 5%;
+    display: block;
+    float: left;
+    height: 100%;
+    border-bottom: 2rpx solid #ddd;
+    background: #fff;
+}
+
+.collect_list_center {
+    height: 210rpx;
+    float: left;
+    padding-top: 28rpx;
+    padding-bottom: 28rpx;
+    overflow: hidden;
+}
+
+.collect_list_center image {
+    width: 200rpx;
+    height: 200rpx;
+    float: left;
+    margin: 0 20rpx 0 10rpx;
+}
+
+.collect_list_centerc text {
+    font-size: 12pt;
+    color: #f10b2e;
+}
+
+.collect_list_centerc {
+    float: right;
+    height: 200rpx;
+}
+
+.collect_list_centerc .collect_center_title {
+    height: 156rpx;
+    width: 380rpx;
+}
+
+.collect_list_centerc .collect_center_title text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 10pt;
+    color: #666;
+	text-align:justify;
+}
+
+.priceBox .collect_line {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 11pt;
+    margin-left: 10rpx;
+    float: right;
+}
+
+.priceBox .nowPrice {
+    float: left;
+    height: 44rpx;
+    line-height: 44rpx;
+}
+
+.priceBox {
+    /* padding-top:30rpx; */
+    overflow: hidden;
+}
+
+.collect_delete {
+    margin: 100rpx 0 0 20rpx;
+    float: right;
+}
+
+.collect_delete image {
+    width: 50rpx;
+    height: 50rpx;
+    float: right;
+}
+
+.loading {
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-animation: weuiLoading 1s steps(12, end) infinite;
+    animation: weuiLoading 1s steps(12, end) infinite;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=) no-repeat;
+    background-size: 100%;
+}
+
+.loadmore {
+    width: 65%;
+    margin: 1.5em auto;
+    line-height: 1.6em;
+    font-size: 14px;
+    text-align: center;
+}
+
+.loadmore_tips {
+    display: inline-block;
+    vertical-align: middle;
+}
+.dixian{
+	font-size:9pt;
+	/* margin-top:30rpx; */
+	color:#999;
+	 padding-top:30rpx; 
+	  padding-bottom:30rpx; 
+	text-align:center;
+
+}

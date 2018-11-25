@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<style>
+  #img{
+  	position:absolute;
+  }
+</style>
+</head>
+<body>
+	<img src="img.jpg" alt="" id="img">
+<script>
+	var img = document.getElementById("img");
+	var targetX = 0;
+	var targetY = 0;
+	var leader = 0;
+	document.onclick = function(e){
+        var e = e || window.e;
+
+        targetX = e.clientX;
+        targetY = e.clientY;
+        setInterval(function(){
+        	img.style.left = img.offsetLeft+(targetX-img.offsetLeft)/10 + "px";
+            img.style.top = img.offsetTop+(targetY-img.offsetTop)/10 + "px";
+        },30)
+        
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this绑定</title>
+</head>
+<body>
+	<script>
+	/* 对象绑定this*/
+		var obj = {
+			sum:sum,
+			b:1
+		}
+		function sum(){
+			console.log(this.b)
+		}
+		obj.sum();
+
+		/* apply绑定this*/
+		function foo(some){			
+			return this.a + some
+		}
+		 var obj1 = {
+		 	a : 2
+		 }
+
+		 var bar = function(){
+		 	console.log(typeof arguments)
+		 	return foo.apply(obj1,arguments)
+		 }
+		 
+		 console.log(bar(3))
+
+		 /* api绑定this*/
+
+		 function fn(value){
+		 	console.log(value)
+		 }
+		 var obj2 = {
+		 	id:"message"
+		 }
+		 if(Array.prototype.forEach){
+
+		 	[1,2,3].forEach(fn);
+		 }
+		 
+		  /* new绑定this*/
+		  function fn1(a){
+		  	this.a = a
+		  }
+		   var obj3 = {
+
+		   }
+		   var baz = fn1.bind(obj3);
+		   baz(2);
+		   console.log(obj3.a);
+
+	</script>
+</body>
+</html>

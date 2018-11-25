@@ -1,0 +1,167 @@
+page {
+    background: #efefef;
+}
+.order_top{
+    width: 100%;
+    background: #FFF;
+}
+.order_top_t{
+    width: 100%;
+    height: 180rpx;
+    background: #606e8b;
+}
+.order_top_t image{
+    float: left;
+    width: 80rpx;
+    height: 80rpx;
+    margin:40rpx 20rpx 0 40rpx;
+}
+.order_top_tr{
+    float: left;
+    margin-top:20rpx;
+}
+.order_top_tr text{
+    font-size: 11pt;
+    color: #FFF;
+    display: block;
+    margin-top: 6rpx;
+}
+.order_top_f{
+    width:100%;
+    height: 150rpx;
+    margin-top: 20rpx;
+}
+.order_top_f image{
+    width:60rpx;
+    height:60rpx;
+    float: left;
+    margin: 30rpx 20rpx 0 40rpx;
+}
+.order_top_fr{
+    float:left;
+}
+.order_top_fr text{
+    font-size: 11pt;
+    color: #999;
+    display: block;
+    margin-top: 10rpx;
+}
+.order_top_fr .order_top_title{
+    font-size: 13pt;
+    color: #000;
+}
+.order_center{
+    width: 100%;
+    height:650rpx;
+    background: #FFF;
+    margin-top: 20rpx;
+}
+.order_center_t{
+    width: 90%;
+    height:100rpx;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #ddd;
+}
+.order_center_t image{
+    width:50rpx;
+    height:50rpx;
+    float: left;
+    margin:30rpx 30rpx 0 10rpx;
+}
+.order_center_t text{
+    font-size: 14pt;
+    float: left;
+    color: #000;
+    margin-top:30rpx;
+}
+.order_center_c{
+    width: 90%;
+    margin:0 auto;
+    height: 150rpx;
+    padding:20rpx 0;
+    border-bottom: 2rpx solid #ddd;
+}
+.order_center_cl{
+    width: 150rpx;
+    height: 150rpx;
+    float: left;
+}
+.order_center_cl image{
+    width: 150rpx;
+    height: 150rpx;
+}
+.order_center_cc{
+    width:40%;
+    float: left;
+    margin: 20rpx 0 0 40rpx;
+}
+.order_center_cc text{
+    display: block;
+    font-size: 11pt;
+    color: #999;
+    margin: 10rpx 0 20rpx 0;
+}
+.order_center_cc .order_center_title{
+    font-size: 13pt;
+    color: #333;
+}
+.order_center_cr{
+    float: right;
+    margin-top:10rpx;
+}
+.order_center_cr text{
+    display: block;
+    text-align: right;
+    font-size: 12pt;
+    color: #666;
+    margin-top:15rpx;
+}
+.order_center_fot{
+    width: 100%;
+    height:240rpx;
+    margin-top:60rpx; 
+}
+.center_fot_list{
+    width: 90%;
+    height:60rpx;
+    margin: 0 auto;
+}
+.center_fot_list text{
+    font-size: 11pt;
+    color: #666;
+}
+.center_fot_listl{
+    float: left;
+}
+.center_fot_listr{
+    float: right;
+}
+.center_fot_list .list_color{
+    color: #e76625;
+}
+.order_fot{
+    width: 100%;
+    height: 140rpx;
+    background: #FFF;
+    margin-top:20rpx; 
+    padding-top:40rpx; 
+}
+.order_btn{
+    width: 100%;
+    margin-top: 30rpx;
+    background: #FFF;
+}
+.order_btn .allorder_add{
+    width:90%;
+    margin:0 auto;
+    height: 110rpx;
+}
+.order_btn .allorder_add .bt{
+    color: #011c41;
+    font-size: 13pt;
+    padding:10rpx 15rpx;
+    margin:25rpx 20rpx 0 0; 
+    border: 2rpx solid #011c41;
+    border-radius:12rpx 12rpx;
+    float: right;
+}

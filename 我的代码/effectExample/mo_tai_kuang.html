@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+	#boxa{
+		background-color:rgba(0,0,0,.2);
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:0;
+		top:0;
+           z-index:1;
+           display:none;
+
+	}
+	#boxb{
+		width:400px;
+		height:300px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin:-150px 0 0 -200px;
+		z-index:2;
+		background:white;
+		display:none;
+
+	}
+
+	#boxb span{
+		position:absolute;
+		right:0px;
+		top:0px;
+		z-index:3;
+		display:block;
+		width:20px;
+		height:20px;
+		background:red;
+		text-align:center;
+		line-height:20px;
+		font-size:16px;
+		cursor:pointer;
+		
+	}
+</style>
+</head>
+<body>
+
+	<div id="boxa"></div>
+	<div id="boxb">
+		<span id="remo">x</span>
+	</div>
+	
+	<button id="btn">登录</button>
+	<script>
+		window.onload=function(){
+var btn = document.getElementById("btn");
+var boxb = document.getElementById("boxb");
+var boxa = document.getElementById("boxa");
+var remo = document.getElementById("remo");
+btn.onclick =function(){
+    boxa.style.display = "block";
+    boxb.style.display = "block";
+
+};
+remo.onclick = function(){
+	boxa.style.display = "none";
+    boxb.style.display = "none";
+}
+		}
+	</script>
+</body>
+</html>

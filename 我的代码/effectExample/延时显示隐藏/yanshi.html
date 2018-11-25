@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.hover{
+			position:relative;
+			margin-top:50px;
+		}
+		h1,h3{
+			margin:0;
+			padding:0;
+
+		}
+		.hover:hover .image{
+			visibility: visible;
+			-webkit-transition-delay:0.5s;
+			transition-delay:0.5s;
+
+		}
+		
+		.image{
+			visibility:hidden;
+			position:absolute;
+			left:0;
+			top:30px;		
+		}
+
+
+		.trans{
+			-webkit-transition:visibility 0s linear;   
+			transition:visibility 0s linear;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="hover">
+		<a href="">经过我显示图片</a>
+		<img src="02.jpg" alt="" class="image trans">		
+	</div>	
+</body>
+</html>

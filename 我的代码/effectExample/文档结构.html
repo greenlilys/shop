@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文档结构</title>
+</head>
+<body>
+<div style="height:3000px">125</div>
+
+	<script>
+
+		console.log(document.title);
+		console.log(document.head);
+		console.log(document.body);
+		console.log(document.documentElement);//输出html document.html 不存在
+     
+     console.log(document.body.children[0]);// 输出<div>125</div>
+//onchange 属性可以使用于： <input>, <select>, 和 <textarea> 当用户改变input输入框内容时执行一段Javascript代码  object.onchange=function(){SomeJavaScriptCode}
+
+//scrollTop	scrollLeft  页面被滚动条卷去的部分
+//谷歌浏览器 和没有声明 DTD  <DOCTYPE	>  document.body.scrollTop;  
+//火狐 和其他浏览器                      document.documentElement.scrollTop;
+ //ie9+  和 最新浏览器都认识              window.pageXOffset;     pageYOffset  （scrollTop）
+//获得scrollTop兼容写法:
+//var scrollTop = window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop || 0;
+
+//window.onscroll = function(){} 页面滚动事件
+
+window.onscroll = function(){
+	var scrollTop = window.pageYOffset || document .documentElement.scrollTop || document.body.scrollTop ||0;
+	console.log(scrollTop)
+}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<view class="myShop-head">
+    <image src="/images/my_shop/test.png" class="head-left" />
+    <view class="head-center">
+        <text class="head-center-title">用户微信名称</text>
+        <view class="head-center-bottom">
+            <text class="head-center-number">75</text>
+            <text>全部商品</text>
+        </view>
+        <view class="head-center-bottom">
+            <image src="/images/my_shop/coloct.png" />
+            <text>收藏本店</text>
+        </view>
+        <navigator url="/pages/share/index.html">
+            <view class="head-center-bottom">
+                <image src="/images/my_shop/erweima.png" />
+                <text>二维码</text>
+            </view>
+        </navigator>
+    </view>
+</view>
+<view class="section">
+    <input type="text" placeholder="请输入关键字"  bindinput="searchInput" confirm-type="done" class="cate-input" />
+    <button bindtap="search" class="btn auto">
+        <image src="/images/home/search.png" mode="widthFix"></image>
+    </button>
+</view>
+<view class="modules">
+    <view wx:for="{{moduleList}}" wx:key="id">
+        <template is="moduleList" data="{{item}}"></template>
+    </view>
+</view>
+<view class="modules">
+    <view class="sq-title add">
+        <image src="/images/home/redxin.png" mode="widthFix"></image>
+        <text class="title">猜你喜欢</text>
+        <navigator class="more" bindtap="navToArea">更多</navigator>
+    </view>
+    <view class="modBox">
+        <view wx:for="{{loveShop}}" wx:key="id">
+            <template is="loveShop" data="{{item}}"></template>
+        </view>
+    </view>
+</view>
+<view class="loadmore" hidden="{{isHideLoadMore}}">
+    <view class="loading"></view>
+    <view class="loadmore_tips">正在加载</view>
+</view>
+<view hidden="{{dixian}}" class="dixian">我是有底线的</view>

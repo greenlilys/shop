@@ -1,0 +1,42 @@
+<view class="comment_top">
+    <view class="comment_tops">
+        <image src="/images/shareimg/test.png" class="comment_tops_l" />
+        <view class="comment_tops_c">
+            <text class="comment_tops_title">{{product.name}} {{product.color}}</text>
+            <text>规格：{{product.proType}}</text>
+        </view>
+        <view class="comment_tops_r">
+            <text>¥{{product.price}}</text>
+            <text>X{{product.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<view class="comment_center">
+    <view class="comment_center_t">
+        <image src="/images/comment/comment_qingchu.png" class="comment_center_tl" />
+        <view class="comment_center_tc">
+           <block wx:for="{{starList}}" wx:key="id">
+			 <image src="{{item.img}}" data-num="{{index}}" bindtap="lightStar"/>
+			</block>        
+        </view>
+        <view class="comment_center_tr ">
+            <text>{{showText || "累计评价"}}</text>
+        </view>
+    </view>
+    <view class="comment_center_c ">
+        <input type="text " placeholder="说点什么吧~~~" bindinput="getText"/>
+    </view>
+    <view class="comment_center_f ">
+        <text wx:if="{{!imgList.length}}" class="shaitu">晒图(最多6张)</text>
+		<block wx:for="{{imgList}}" wx:key="*this">
+			<view class="imgBox">
+				 <image src="{{item}}" class="uplodeImg"></image>
+				  <image src="/images/comment/delet.png" class="deletImg" data-imgIndex="{{index}}" bindtap="deletImg"></image>  
+			</view>			
+		</block>			
+        <image src="/images/comment/add1.png " bindtap="inputImg" class="chooseImg"/> 
+		<text wx:if="{{imgList.length}}" class="Prompts">还可上传{{lastImg}}张</text>
+    </view>
+</view>
+
+    <navigator url="order_detail "><button class="add " bindtap="primary">提交评论</button></navigator>

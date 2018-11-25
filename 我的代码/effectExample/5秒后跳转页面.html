@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+div{
+	width:800px;
+	height:200px;
+	background-color:red;
+	margin:200px auto;
+	text-align:center;
+	line-height:200px;
+}
+</style>
+</head>
+<body>
+	<div id="demo">
+		
+	</div>
+
+<script>
+	var demo = document.getElementById("demo");
+	var op = demo.firstChild;
+	var count = 5;
+	var speed = 1000;
+	setTimeout(goIndex,speed);
+	function goIndex(){
+		count--;
+		demo.innerHTML = "<a href='http://www.baidu.com'>"+count+"秒钟之后自动跳转</a>"  ;
+		if(count<=0){
+			window.location.href = "http://www.baidu.com";
+
+		}
+		else{
+
+			setTimeout(goIndex,speed);
+
+		}
+	}
+
+</script>
+</body>
+</html>

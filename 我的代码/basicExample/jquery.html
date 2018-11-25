@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table{
+			border-collapse:collapse;
+		}
+	</style>
+</head>
+<body>
+	<table id="tab" border="1">
+		<tbody class="one">
+			<tr><td>贸易</td><td>贸易</td><td>贸易</td></tr>
+			<tr><td>货物</td><td>货物</td><td>货物</td></tr>
+			<tr><td>人工</td><td>人工</td><td>人工</td></tr>
+			<tr><td>财产</td><td>财产</td><td>财产</td></tr>
+			<tr><td>黄金</td><td>黄金</td><td>货物</td></tr>
+			<tr><td>货物</td><td>货物</td><td>货物</td></tr>
+			<tr><td>货物</td><td>货物</td><td>货物</td></tr>
+			<tr><td>货物</td><td>货物</td><td>货物</td></tr>
+		</tbody>
+	</table>
+	<div class="" id="box">
+		<div class="subone">    
+			<span class="subtwo" style="color:red;">   123456</span>   
+			<a href="www" title="你好" class="subthree" style="color:blue;">555555555</a>
+		</div>
+	</div>
+	<script src="../src/jquery/jquery-3.2.1.min.js"></script>
+	<script>	
+		$(function(){
+			$("#tab tbody tr:even").css("backgroundColor","red");
+
+			var a = ['a','b','c','d'];
+	console.log($.inArray('c',a));//查找数组中某一项在数组中的下标位置，找不到返回-1
+
+	var str = '{"name":"jack"}';
+	console.log($.parseJSON(str).name);//字符串转换json
+
+	var otr = document.getElementsByTagName('tr');
+	 var arr = $.makeArray(otr);//$.makeArray把类数组转换为数组
+
+	 $('.subtwo').parents('#box').css('background','#ccc');//在所有祖先元素中过滤出某个元素
+
+
+	})
+		console.log(document.getElementsByClassName('subone')[0].childNodes);
+		console.log(document.getElementsByClassName('subthree')[0].childNodes.length);
+		console.log(document.getElementsByClassName('subone')[0].lastChild);
+		var otext = document.createTextNode('hello');
+		var osubtwo = document.getElementsByClassName('subtwo')[0];
+		osubtwo.parentNode.insertBefore(otext,osubtwo);
+	</script>
+
+
+</body>
+</html>

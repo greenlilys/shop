@@ -1,0 +1,19 @@
+<scroll-view scroll-y="true" style="height:{{windowHeight}}px; width:{{windowWidth}}px;" bindscrolltolower="lower" upper-threshold="10px" lower-threshold="10px">
+
+<view class="modBox">
+    <block wx:for="{{products}}" wx:key="id">
+        <view class="pro-list">
+            <navigator url="/pages/detail/index?id={{item.id}}">
+                <image src="{{item.original_img}}" mode="widthFix"></image>
+                <text class="pro-name">{{item.good_name}}</text>
+                <view class="price">¥{{item.price}}</view>
+            </navigator>
+        </view>
+    </block>
+</view>
+<view class="loadmore" hidden="{{isHideLoadMore}}">
+        <view class="loading"></view>
+        <view class="loadmore_tips">正在加载</view>
+</view>
+ <view hidden="{{!noMore}}" class="dixian">我是有底线的</view>
+</scroll-view>

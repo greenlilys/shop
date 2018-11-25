@@ -1,0 +1,39 @@
+<template name="moduleList">
+    <view wx:if="{{item.list.length}}">        
+         <view class="sq-title">
+            <image src="/images/home/icon-{{item.icon}}.png" mode="widthFix"></image>
+            <text class="title">{{item.title}}</text>
+            <navigator class="more" wx:if="{{item.list.length > 3}}" data-type="{{item.icon}}" bindtap="navToArea">更多</navigator>
+        </view>
+        <view class="modBox">
+            <block wx:for="{{item.list}}" wx:key="id">
+                <view class="pro-list">
+                    <navigator url="/pages/detail/index?id={{item.id}}">
+                        <image src="{{item.original_img}}" mode="widthFix"></image>
+                        <text class="pro-name">{{item.good_name}}</text>
+                        <view class="price">¥{{item.current_price}}</view>
+                    </navigator>
+                </view>
+            </block>
+        </view>
+    </view>
+</template>
+
+<template name="navList">
+    <navigator url="../recharge/index">
+        <view class="am-gallery-item">
+            <image src="{{item.thumb}}" mode="widthFix"></image>
+            <text>{{item.title}}</text>
+        </view>
+    </navigator>
+</template>
+
+<template name="loveShop">
+    <view class="pro-list">
+        <navigator url="/pages/detail/index?id={{item.id}}">
+            <image src="{{item.original_img}}" mode="widthFix"></image>
+            <text class="pro-name">{{item.good_name}}</text>
+            <view class="price">¥{{item.current_price}}</view>
+        </navigator>
+    </view>
+</template>

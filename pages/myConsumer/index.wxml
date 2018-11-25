@@ -1,0 +1,44 @@
+<view class="myteam-head">
+    <text>我的客户({{tapBun}})</text>
+</view>
+<view class="myteam-body">
+
+    <!-- <view class="{{ranks}} rank">
+        <block wx:for="{{leavlBtn}}" wx:key="*this">
+            <view class="{{item.backgroundContral}}" bindtap="clickBtn" data-currentBtn="{{index}}">{{item.classLeavl}}</view>
+        </block>
+    </view> -->
+
+    <view class="member-head ">
+        <view class="members">
+            <text class="member-head-title">成员信息</text>
+            <text class="member-head-member">TA的消费订单/金额</text>
+        </view>
+    </view>
+    <block wx:for="{{personList}}" wx:key="id">
+        <view class="member">
+            <!-- <view class="member-head">
+                <text class="member-head-title">成员信息</text>
+                <text class="member-head-member">TA的佣金/成员</text>
+            </view> -->
+            <view class="member-body">
+                <view class="member-body-left">
+                    <image src="/images/shareimg/test.png"></image>
+                </view>
+                <view class="member-body-center">
+                    <text class="member-body-centeritem">{{item.niName}}</text>
+                    <text class="member-body-centertime">{{item.data}} {{item.time}}</text>
+                </view>
+                <view class="member-body-right">
+                    <text>+{{item.num}}</text>
+                    <text>{{item.num}}个成员</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+<view class="loadmore" hidden="{{isHideLoadMore}}">
+    <view class="loading"></view>
+    <view class="loadmore_tips">正在加载</view>
+</view>
+<view hidden="{{dixian}}" class="dixian">我是有底线的</view>

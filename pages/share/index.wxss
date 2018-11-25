@@ -1,0 +1,58 @@
+page{
+    background: #eee;
+}
+.share-top{
+    width: 100%;
+    height:500rpx;
+    margin:20rpx auto;
+}
+.share-top image{
+    width:480rpx;
+    height:480rpx;
+    margin-left:135rpx;
+}
+.share-bottom{
+    width: 90%;
+    padding:10rpx 3%;
+    background: #FFF;
+}
+.share-bottom-title{
+    height:100rpx;
+    line-height:100rpx;
+    border-bottom: 2rpx solid #ddd;
+}
+.share-bottom-title image{
+    width:60rpx;
+    height:60rpx;
+    float: left;
+    margin:20rpx 10rpx 0 0;
+}
+.share-bottom-title text{
+    font-size: 13pt;
+    color: #000;
+}
+.share-botton-center{
+    margin-top:10rpx;
+}
+.share-botton-center view{
+    margin-top: 10rpx;
+}
+.share-botton-center text{
+    font-size: 11pt;
+    color: #666;
+    margin-top: 10rpx;
+}
+.share-botton-center text.bottom-center-title{
+    font-size: 12pt;
+    color: #000;
+    margin-right:20rpx;
+}
+.share-bottom-foot{
+    height:160rpx;
+    background: #fe924a;
+    color: #FFF;
+    font-size: 11pt;
+    padding: 20rpx 20rpx;
+    line-height:40rpx;
+    margin:15rpx 0;
+}

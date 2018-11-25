@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="prompt">
+        <icon type="{{promptType}}" size="46"></icon>
+        <text>{{payment}}</text>
+        <text wx:if="{{ type == 'goods'}}">￥{{result.total_price}}</text>
+        <text wx:if="{{ type == 'recharge'}}">￥{{result.value}}</text>
+    </view>
+
+    <view class="firmContent" wx:if="{{ type == 'goods'}}">
+        <text>订单编号：{{result.order_sn}}</text>
+        <text>联系人：{{result.contract_name}}</text>
+        <text>联系电话：{{result.contract_mobile}}</text>
+        <text>交易时间：{{result.created_at}}</text>
+    </view>
+    <navigator url="/pages/home/index" open-type="switchTab">
+        <button type="primary" >返回首页</button>
+    </navigator>
+    <navigator  wx:if="{{ type == 'goods'}}" url="/pages/myOrder/index">
+	    <button type="primary">我的订单</button>
+    </navigator>
+    <navigator  wx:if="{{ type == 'recharge'}}" url="/pages/recharge_record/index">
+        <button type="primary">充值记录</button>
+    </navigator>
+</view>

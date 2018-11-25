@@ -1,0 +1,25 @@
+<view class="comment_top">
+    <view class="comment_tops">
+        <image src="/images/shareimg/test.png"  class="comment_tops_l" />
+        <view class="comment_tops_c">
+            <text class="comment_tops_title">{{product.name}} {{product.color}}</text>
+            <text>规格：{{product.proType}}</text>
+        </view>
+        <view class="comment_tops_r">
+            <text>¥{{product.price}}</text>
+            <text>X{{product.orderNum}}</text>
+        </view>
+    </view>
+</view>
+<view class="comment_center">
+    <view class="comment_center_c">
+        <input type="text" placeholder="说点什么吧~~~" />
+    </view>
+    <view class="comment_center_f">
+        <text>晒图(最多5张)</text>
+        <image src="/images/comment_add/add1.png" />
+    </view>
+</view>
+<view class="comment_bt">
+    <navigator url="order_detail"><button type="primary" bindtap="primary">提交评论</button></navigator>
+</view>

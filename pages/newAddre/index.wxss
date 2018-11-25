@@ -1,0 +1,73 @@
+page {
+    display: block;
+    min-height: 100%;
+    background-color: #F5F5F5;
+    font-family: "微软雅黑";
+    font-size: 12pt;
+    color: #353535;
+    position: relative;
+}
+
+.info {
+    background-color: #fff;
+    margin-bottom: 30rpx;
+}
+
+.item {
+    height: 90rpx;
+    align-items: center;
+    display: flex;
+    margin-left: 30rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+input placeholder {
+    color: #cb2527;
+}
+
+.area {
+    width: 150rpx;
+    border: 1rpx solid #939393;
+}
+
+.save {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffc800;
+    color: #fff;
+}
+
+.right {
+    padding-left: 30rpx;
+    width: 75%;
+    
+    display: flex;
+    font-size: 11pt;
+}
+
+input {
+    width: 100%;
+}
+
+.addre {
+    font-size: 12pt;
+
+}
+.message_list{
+    width: 92%;
+    height:90rpx;
+    margin: 0 auto;
+    
+}
+.message_list text{
+    float: left;
+    font-size: 12pt;
+    color: #333;
+    line-height:90rpx;
+}
+.body-view{
+    float: right; 
+}
+.body-view switch{
+    margin-top:15rpx;
+}

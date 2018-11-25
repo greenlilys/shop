@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="jquery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<script>
+	var MyString = function(str){
+				this.content = str;
+			};
+			MyString.prototype.copy = function(){
+				console.log(this);
+				return new this.constructor(this.content);
+
+			};
+		
+		(function(){
+			
+			var name = new MyString("hanMeimei");			 
+			var anotherName = name.copy();
+			console.log(anotherName);
+			console.log(anotherName === name);
+			
+		})();
+
+
+		
+		function Person(name,age,job){
+			this.name = name;
+			this.age = age;			
+		}
+		Person.prototype.sayName = function(){
+			console.log(this.name)
+		}
+
+		Person.prototype.sayAge = function(){
+			console.log(this.age)
+		}
+		
+		var person1 = new Person("张三",20,"teacher");
+		var person2 = new Person("李四",30,"manager");
+
+		person1.sayName();
+		console.log(Object.getPrototypeOf(person1))
+		console.log(Person.prototype)
+
+		var obj = Person.prototype;
+		var item = "";
+
+		for(val in obj){
+			item += val + ':' + obj[val] + "\n";
+		}
+		console.log(item);
+		console.log(person1.hasOwnProperty("name"));
+		console.log(person1.hasOwnProperty("sayAge"));
+
+
+	</script>
+</body>
+</html>

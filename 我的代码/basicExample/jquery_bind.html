@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="../src/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="" id="test"></div>
+<input type="button" value="点击" id="btn">
+
+</body>
+<script>
+	$(function(){
+    $('#btn').bind("click",function(){
+        $("#test").append("<p>我的绑定函数1</p>");
+    }).bind("click",function(){
+        $("#test").append("<p>我的绑定函数2</p>");
+    }).bind("click",function(){
+        $("#test").append("<p>我的绑定函数3</p>")
+    });
+});
+</script>
+</html>

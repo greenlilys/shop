@@ -1,0 +1,104 @@
+/* pages/myCoupon/index.wxss */
+page{
+    background: #efefef;
+}
+.coupon_top{
+    width:90%;
+    padding: 0 5%;
+    height: 100rpx;
+    background: #f9f9f9;
+    border-bottom: 2rpx solid #ddd;
+    text-align: center;
+    font-size: 12pt;
+    color: #333;
+    line-height: 100rpx;
+}
+.coupon_topl{
+    float: left;
+    width: 50rpx;
+    height: 50rpx;
+    margin-top:25rpx;
+}
+.coupon_topr{
+    float:right;
+    width:60rpx;
+    height:60rpx;    
+	margin-right:26rpx;
+	margin-top:10rpx;
+}
+.coupon_tops{
+    width: 100%;
+    height: 80rpx;
+    background: #FFF;
+
+}
+.coupon_tops text{
+    margin-left: 5%;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #f96f02;
+    font-size: 13pt;
+}
+.coupon_list{
+    width: 92%;
+    height:150rpx;
+    background: #fff;
+    margin:20rpx auto;
+}
+.coupon_img{
+    width: 100rpx;
+    height: 100rpx;
+    float: left;
+    margin: 20rpx 20rpx;
+}
+.coupon_list_center{
+    width:42%;
+    height: 150rpx;
+    float: left;
+}
+.coupon_list_center text{
+    display: block;
+    font-size: 12pt;
+    color: #666;
+    margin-top:8rpx;
+}
+.coupon_list_center .list_color{
+    color: #f96f02;
+    display: inline;
+    font-size: 10pt;
+    margin-right: 5rpx;
+}
+.coupon_list_center .coupon_list_title{
+    font-size: 13pt;
+    color: #000;
+}
+.coupon_list_center .coupon_list_time{
+    font-size: 11pt;
+}
+.coupon_list_center .coupon_list_tj{
+    font-size: 10pt;
+}
+.coupon_list_right{
+    float: right;
+    width:35%;
+    height:130rpx;
+    padding-top:20rpx;
+    background: #5b9dfd;
+}
+.coupon_list_right text{
+    display: block;
+    color: #FFF;
+    text-align: right;
+    margin-right:20rpx;
+    font-size: 12pt;
+}
+.coupon_list_right .coupon_list_price{
+    font-size:20pt;
+}
+.coupon_list_rights{
+    background: #fe7e00;
+}
+.prompt{
+	text-align:center;
+	font-size:12pt;
+}

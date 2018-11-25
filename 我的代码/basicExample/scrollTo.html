@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+//window.scrollTo(x,y)此方法可以把内容滚动到指定坐标
+//window.onscroll = function(){}屏幕滚动事件
+//window.onresize = function(){}窗口改变事件
+//封装函数获得浏览器宽度 高度
+function client(){
+	if(window.innerWidth != null){
+		return{ //ie9+以上版本
+			width:window.innerWidth,
+			height:window.innerHeight
+		}
+		}
+		else if(document.compatMode === "CSS1Compat"){
+			return{ //标准模式
+				width:document.documentElement.clientWidth,
+				height:document.documentElement.clientHeight
+			}
+    }
+			return{//怪异浏览器
+				width:document.body.clientWidth,
+				height:document.body.clientHeight
+			}
+		
+	
+}
+
+
+//window.screen.width得到电脑的分辨率 与浏览器没有关系
+console.log(client().width)
+</script>	
+</body>
+</html>

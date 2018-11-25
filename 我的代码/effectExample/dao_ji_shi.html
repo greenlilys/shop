@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="../src/jquery-3.2.1.min.js"></script>
+    <title></title>
+    <style>
+      
+    </style>
+  </head>
+ 
+  <body>
+     <script>
+     	$(function(){
+  function leftTime(){
+    var endTime = new Date("2018/7/20,12:00:00");//结束时间
+    var curTime = new Date();//当前时间    
+    var leftTime = parseInt((endTime.getTime() - curTime.getTime())/1000);//获得时间差
+    //小时、分、秒需要取模运算
+    var d = parseInt(leftTime/(60*60*24));
+    var h = parseInt(leftTime/(60*60)%24);
+    var m = parseInt(leftTime/60%60);
+    var s = parseInt(leftTime%60);
+    var ms = parseInt((endTime.getTime() - curTime.getTime())/100%10);
+    var txt = "剩余："+d+"天"+h+"小时"+m+"分钟"+s+"."+ms+"秒";
+    $(".left-time").text(txt);
+    if(leftTime<=0){ $(".left-time").text("团购结束");}
+  };  
+  var set = setInterval(leftTime,100);
+});
+     
+     </script>
+    <p class="left-time"></p>
+  </body>
+ 
+</html>
